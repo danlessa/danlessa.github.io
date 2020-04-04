@@ -1,0 +1,13 @@
+<nav class="nav">
+  <div class="container">
+    <h1 class="logo"><a href="{{ '/' | prepend: site.baseurl | prepend: site.url }}">{{ site.title_left }}<span>{{ site.title_right }}</span></a></h1>
+    <ul class="navbar">
+      {% assign sorted_pages = site.pages | sort:"order" %}
+      {% for sitePage in sorted_pages %}
+      {% if sitePage.title %}
+      <li><a href="{{sitePage.url | prepend: relative_url }}">{{sitePage.title}}</a></li>
+      {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

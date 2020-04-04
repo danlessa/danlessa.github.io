@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title></title>
+    <description>🇧🇷🌍⛺🔭🔬📚🗿🚲</description>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Mon, 15 Apr 2019 21:08:51 -0300</pubDate>
+    <lastBuildDate>Mon, 15 Apr 2019 21:08:51 -0300</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>New website and blog</title>
+        <description>&lt;p&gt;This is my new website and blogging platform - and it is a lot more anarchic than before!&lt;/p&gt;
+
+&lt;p&gt;I always wanted an intuitive, practical and easy to mantain way for me to express and expose whatever I wanted to - from blogging and ranting to complex math words and data exploration notebooks. But I never found an truly convenient, easy and quick way to do so.&lt;/p&gt;
+
+&lt;p&gt;After years of trying and failing to write and expose myself more, I think I finally found the technology to express my desires, and the answer is Markdown, GitHub, Jupyter, Jekyll, Forestry.io.&lt;/p&gt;
+
+&lt;p&gt;I’ll try to sum the technology quickly without regards to precision: Markdown &lt;a href=&quot;https://www.markdownguide.org/basic-syntax/&quot;&gt;Markdown basic syntax&lt;/a&gt; is an extremely convenient form of creating rich-text and HTML documents on an simple text editor. GitHub is an open-source repository which has an personal and/or project website hosting through &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt; and using Jekyll and Markdown to expose the content. Jupyter is an interactive way of programming Python that uses an web GUI and has the possibility of exporting notebooks to Markdown. Jekyll is an simple Markdown static site generator and server. Forestry.io is an free service which syncs an Jekyll website repository to several destinations, incluindo GitHub pages and SFTP locations.&lt;/p&gt;
+
+&lt;p&gt;Having said all of that, you can see how Markdown is in the center of everything. It is an language that I was using to create notes and document code for some time now, and is an very efficient way to express yourself quickly without regards to stressing with formatting and styling.&lt;/p&gt;
+
+&lt;p&gt;Oh, and for now I’ll start to begin to write in English. Mostly because it is an good excuse for practicing it.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 13 Apr 2019 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2019/new-website-blog/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/new-website-blog/</guid>
+        
+        <category>meta</category>
+        
+        <category>personal</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Levantamento de empresas de ônibus rodoviário amigáveis ao ciclista</title>
+        <description>&lt;p&gt;Disclaimer: esse documento é colaborativo, propositivo e em caráter eterno de rascunho. Não seja tímido de editar, discutir ou criticar.&lt;/p&gt;
+
+&lt;h2 id=&quot;resumo&quot;&gt;Resumo&lt;/h2&gt;
+
+&lt;p&gt;Busca-se neste projeto estudar, implementar, divulgar e ramificar um levantamento extensivo e detalhado acerca da permissibilidade do transporte de bicicletas nos ônibus rodoviários no Brasil.&lt;/p&gt;
+
+&lt;p&gt;Para tal, serão identificados pontos de importância para os ciclistas brasileiros em diferentes estratos visando a formulação de uma lista de métricas a fim de classificar as empresas operadores de linhas rodoviárias - nas quais adotaremos um método para inferir o posicionamento das mesmas.&lt;/p&gt;
+
+&lt;p&gt;Adquirido os dados de um modo suficientemente representativo de todo o universo de linhas rodoviárias, estudará-se então a formulação de uma métrica composta afim de classificar as empresas de acordo com a sua “amigabilidade” ao ciclista. O resultado final será uma planilha extensa e detalhada pública com possíveis usos distintos, no qual cito especificamente a criação de um aplicativo web que simule trechos de ônibus junto a “amigabilidade” ao ciclista.&lt;/p&gt;
+
+&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt;
+
+&lt;h3 id=&quot;objetivos&quot;&gt;Objetivos&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Principais&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Mapear as necessidades e aflições de um modo representativo ao transportar a bicicleta em ônibus rodoviários.&lt;/li&gt;
+  &lt;li&gt;Estabelecer métricas que façam correspondência com o objetivo acima.&lt;/li&gt;
+  &lt;li&gt;Levantar as métricas junto com as empresas operadoras de linhas rodoviárias no Brasil.&lt;/li&gt;
+  &lt;li&gt;Disponibilizar os resultados obtidos de um modo acessível e fácil de ser consumido.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;Secundários&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Criar um aplicativo web que possibilite a simulação de rotas de ônibus junto com a exposição das métricas obtidas.&lt;/li&gt;
+  &lt;li&gt;Explorar ramificações da informação adquirida para no cicloativismo.&lt;/li&gt;
+  &lt;li&gt;Estudar a possibilidade da criação de um “selo” de empresa amiga do ciclista, para uso das empresas bem colocadas nas métricas.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;frentes-de-trabalho&quot;&gt;Frentes de trabalho&lt;/h3&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Discussão e coleta das necessidades, experiências, expectativas e sonhos dos usuários de bicicleta em relação ao uso de ônibus rodoviário. É importante que saibamos exatamente o que aflige o ciclista na hora de viajar tanto na problemática quanto no perfil, seja ele cicloturista ou competidor, excluido ou elitizado, viajante local ou distante. (2 a 4 pessoas com perfil representativo/experiência diversas? 1-3h de tempo para fazer conversas e discussão)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Formulação de um método padrão para coleta de informações. São muitas empresas, então precisamos adotar um método padrão para aferir as características levantadas no ponto 1. E não necessariamente as empresas vão querer se posicionar, então o que fazer nesse caso? Informações levantadas informalmente e/ou pessoalmente são mais úteis que nenhuma informação, mas como que levamos isso em consideração? (2 a 4 pessoas com perfil representativo/experiência diversas? 1-2h de tempo para fazer conversas e discussão)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Levantamento das informações. Isso significa contato direto com a empresa. Isso pode ser tanto através do e-mail quanto por telefone ou pergunta direta aos funcionários ou usuários passados. (1 a 4 pessoas com disposição de ceder tempo útil, algo entre 5-20h de tempo para levantar as informações)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Visualização das informações. Isso pode ser tanto só divulgar uma planilha quanto para até o desenvolvimento de um aplicativo web que faça a simulação de rotas de ônibus e já dê uma pontuação atrelada a cada linha ou horário. Algo no estilo do buscaonibus.com. Os dados para isso existem e são públicos, mas há a necessidade de um programador. (pessoas que saibam algo de desenvolvimento de aplicativos web)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Composição de uma pontuação para cada empresa: como fazemos isso? Damos uma nota de 0 a 100% com qualquer critério? Ou damos selo de amigo do ciclista? É uma discussão interessante de se ter (2 a 4 pessoas com perfil representativo/experiência diversas?, 1-2h de tempo para conversas e discussões)&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;aquisição-dos-dados&quot;&gt;Aquisição dos dados&lt;/h2&gt;
+
+&lt;h3 id=&quot;metodologia&quot;&gt;Metodologia&lt;/h3&gt;
+
+&lt;h4 id=&quot;mapeamento-de-aflições-e-constatações&quot;&gt;Mapeamento de aflições e constatações&lt;/h4&gt;
+
+&lt;p&gt;De Vinicius Mundim (UCB):&lt;/p&gt;
+
+&lt;p&gt;“Há empresas de ônibus / avião que só aceitam (ou se veem obrigadas a aceitar) bicicletas quando o ciclista apresenta a carteirinha de federado (CBC ou federação estadual), o que acaba por criar uma segregação desnecessária. Mas é um caminho para tentar mapear o cenário.
+“&lt;/p&gt;
+
+&lt;p&gt;De Leonardo Dal Picolo (UCB):&lt;/p&gt;
+
+&lt;p&gt;”&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Ônibus de dois andares (leito e semi leito) tem bagageiros menores e mais gente viajando. É bom checar antes de comprar a passagem, porque no ônibus convencional (apenas um andar) os bagageiros são mais altos e sobra mais espaço. Eu nem tento colocar minha bicicleta em um ônibus de dois andares, principalmente se for rota muito turística e data festiva. Mas se essa fosse a única opção, eu reduziria a bagagem (em volume) ao máximo possível.&lt;/li&gt;
+  &lt;li&gt;Tirar a roda dianteira e pedais e abaixar/tirar selim geralmente são suficientes quando se coloca a bicicleta dentro de uma caixa ou envolve a bicicleta com papelão. Já levei a bicicleta até sem qualquer proteção, mas isso pode impedir o transporte em alguns casos. A maior preocupação dos motoristas é que a bicicleta não danifique outras bagagens. Se alguém tem receio de desmontar a bicicleta para transportar, acredito que em caso de uma lei específica, provavelmente seria exigido que retirasse ao menos roda dianteira, pedais e selim.&lt;/li&gt;
+  &lt;li&gt;Nunca me cobraram qualquer valor adicional pelo transporte da bicicleta. Venho transportando bicicleta em ônibus desde 2013, então pode ser que algumas empresas tenham criado regulamento para o transporte de bicicleta nesse tempo. Aparentemente não há lei específica para o transporte de bicicleta.&lt;/li&gt;
+  &lt;li&gt;Sempre chegar com antecipação, para deixar tudo preparado. Eu converso com as pessoas que vão embarcar no mesmo ônibus (na maior parte das vezes essas pessoas que iniciam a conversa, por curiosidade) e já aconteceu até de me ajudarem/apoiarem na argumentação com motorista mais burocrático.&lt;/li&gt;
+  &lt;li&gt;Evito o esforço do motorista/pessoa que carrega o bagageiro. Sempre que possível, pergunto onde pode colocar e eu mesmo organizo tudo, no momento que a pessoa reserva para guardar a bicicleta (e toda a tranqueira que acompanha a bicicleta…).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Diante do exposto, ao menos de minha parte, eu não tentaria (muito menos nesse momento político) dialogar para a criação de uma lei específica para o transporte de bicicletas. Digo isso porque aparentemente (pelo menos da minha experiência) ainda é relativamente fácil e grátis transportar a bicicleta no ônibus. No Chile tive que pagar o valor de outra passagem para transportar a bicicleta.
+“&lt;/p&gt;
+
+&lt;h3 id=&quot;resultados&quot;&gt;Resultados&lt;/h3&gt;
+
+&lt;h4 id=&quot;resultado-conceitual&quot;&gt;Resultado conceitual&lt;/h4&gt;
+
+&lt;p&gt;Uma planilha de prova de conceito está link no https://goo.gl/M18sHJ&lt;/p&gt;
+
+&lt;p&gt;São colocadas três métricas: Clareza, Receptividade e Extra. Há também uma métrica composta de Pontuação.&lt;/p&gt;
+
+&lt;p&gt;As informações foram coletadas de um modo exploratório através da inspeção direta em websites institucionais, ferramentas de busca online e grupos de discussão online.&lt;/p&gt;
+
+&lt;p&gt;A métrica de Receptividade é definida como sendo entre 0 a 4 (inteiros) e se refere ao posicionamento da empresa em relação ao transporte de bicicleta, sempre com base no menor denominador.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Receptividade&lt;/th&gt;
+      &lt;th&gt;Descrição&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;Proibido&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Taxado&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Obrigatório embalar&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Burocrático*&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Permitido&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;?&lt;/td&gt;
+      &lt;td&gt;Desconhecido&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;* A empresa coloca empecilhos, como exigir nota fiscal.&lt;/p&gt;
+
+&lt;p&gt;A métrica de Clareza é definida como sendo entre 0 a 4 (inteiros) e corresponde ao tanto que a métrica de receptividade é representativa e abraçada pela empresa como um todo. Tal métrica busca tornar possível a mescla entre informações verificadas institucionalmente e informalmente.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Clareza&lt;/th&gt;
+      &lt;th&gt;Descrição&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;0&lt;/td&gt;
+      &lt;td&gt;Informal: algum motorista deixou&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Indireto: algum funcionário de médio escalão permitiu&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Escrito: há um posicionamento via texto não-público, como via chat e e-mail&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Mídia: A empresa se posicionou via redes sociais ou imprensa&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;Oficial: A empresa se posicionou publicamente em caráter regulamentado&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;ramificações&quot;&gt;Ramificações&lt;/h2&gt;
+
+&lt;h3 id=&quot;aplicativo-web&quot;&gt;Aplicativo web&lt;/h3&gt;
+
+&lt;p&gt;Uma forma de expor os resultados obtidos é através de uma aplicativo web que faça a simulação de rotas de ônibus dada a entrada da origem e destino pelo usuário. Para tal, é possível tanto construir uma solução “do zero” utilizando informações contidas na ANTT, ou então é possível fazer parceria com alguns dos sites que já o fazem a simulação, como o buscaonibus.com.br e clickbus.&lt;/p&gt;
+
+&lt;p&gt;Uma eventual parceria poderia envolver tanto a cessão da API e dicionário de empresas utilizadas para uma reimplementação em um website próprio, ou poderia ser uma parceria mais integral onde a implementação seria diretamente no website do parceiro.&lt;/p&gt;
+
+&lt;p&gt;Caso haja a necessidade de hospedagem, a UCB já se ofereceu de manter o mesmo em seu website.&lt;/p&gt;
+
+&lt;h4 id=&quot;possíveis-parceiros&quot;&gt;Possíveis parceiros&lt;/h4&gt;
+
+&lt;h5 id=&quot;buscaonibuscombr&quot;&gt;buscaonibus.com.br&lt;/h5&gt;
+
+&lt;p&gt;A primeira empresa a ser contatada é o buscaonibus.com.br. Obtive uma boa receptividade por parte do CEO e o mesmo está em vias de dialogar com o time da empresa para então dar um feedback.&lt;/p&gt;
+
+&lt;h3 id=&quot;cicloativismo&quot;&gt;Cicloativismo&lt;/h3&gt;
+
+&lt;p&gt;A realização desse estudo fornece um ingrediente essencial para futuras articulações com a ANTT. Cito aqui o Yuriê da UCB:&lt;/p&gt;
+
+&lt;p&gt;“Uma sugestão que tenho é que essa mobilização toda aconteca em conjunto com uma pressão junto à ANTT para que o transporte de bicicleta seja de fato realidade. As normas da ANTT já preveem o transporte de bicicletas em ônibus, mas as empresas descumprem. Tenho alguns contatos lá é posso ajudar nisso.&lt;/p&gt;
+
+&lt;p&gt;Inclusive, a ANTT é obrigada por lei a realizar uma pesquisa anual de avaliação dos serviços das concessionárias e empresas. Ao longo dos 15 anos de existência a terceira pesquisa está sendo finalizada. Estou em um grupo junto à CGU que está penando em métodos para baratear a pesquisa e permitir que ela seja realizada anualmente. Já coloquei essa questão do transporte das bicicletas ao grupo, mas posso reforçar.&lt;/p&gt;
+
+&lt;p&gt;Como Daniel falou, é importante definir como avaliar o transporte da bicicleta e, pra isso, acho fundamental definir como é o modelo ideal. Podemos conseguir que a ANTT faça uma audiência pública sobre o tema para definir esse padrão.”&lt;/p&gt;
+
+&lt;h3 id=&quot;selo-de-empresa-de-ônibus-amiga-do-ciclista&quot;&gt;Selo de empresa de ônibus amiga do ciclista&lt;/h3&gt;
+
+&lt;h3 id=&quot;imprensa&quot;&gt;Imprensa&lt;/h3&gt;
+
+&lt;h2 id=&quot;conclusões&quot;&gt;Conclusões&lt;/h2&gt;
+
+&lt;h2 id=&quot;anexo&quot;&gt;Anexo&lt;/h2&gt;
+</description>
+        <pubDate>Mon, 01 Apr 2019 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2019/levantamento-empresas-ciclistas/</link>
+        <guid isPermaLink="true">http://localhost:4000/2019/levantamento-empresas-ciclistas/</guid>
+        
+        <category>projects</category>
+        
+        <category>bike</category>
+        
+        
+        <category>documents</category>
+        
+      </item>
+    
+      <item>
+        <title>Como ficar bêbado eficientemente usando resultados científicos</title>
+        <description>&lt;h1 id=&quot;como-ficar-bêbado-eficientemente-usando-resultados-científicos&quot;&gt;Como ficar bêbado eficientemente usando resultados científicos&lt;/h1&gt;
+
+&lt;p&gt;Um problema rotineiro e pertinente para muitos jovens é a questão da embriaguez com alcool: como atingir esse estado evitando-se efeitos adversos como vômitos, perca de memória e inconsciência ao mesmo tempo em que se maximiza a extroversão e “alegria” oriundos do consumo em si?&lt;/p&gt;
+
+&lt;p&gt;Nessa postagem, irei fazer uma exploração rápida bem como farei sugestões acerca do tema utilizando-se de fontes científicas reputáveis.&lt;/p&gt;
+
+&lt;p&gt;Em todo o corpo do texto, irei usar a sigla BAC (Blood Alcohol Content) como significando a concentração de alcool no sangue. Em outras palavras, é a porcentagem em massa do seu sangue como sendo alcool.&lt;/p&gt;
+
+&lt;h2 id=&quot;estimando-a-concentração-do-alcool-no-corpo&quot;&gt;Estimando a concentração do alcool no corpo&lt;/h2&gt;
+
+&lt;p&gt;A evolução da concentração do alcool no corpo já foi muito explorada pela ciência forense e as estimativas da eliminação do alcool do corpo costumam baseadas na fórmula de Widmark, cuja explanação pode ser melhor ser vista na referência &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;.&lt;/p&gt;
+
+&lt;p&gt;Porém para fins de simplicidade, irei considerar que o alcool é imediatamente digerido pelo corpo e irei adotar o modelo adotado por um estudo sueco em universidades &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;, na qual a variante da fórmula de Widmark pode ser expressa como:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/outros/eq_bac.png&quot; alt=&quot;Fórmula da embriaguez&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;onde 0.806 é a constante de água do corpo, 0.12 é um fator de conversão, BW é uma constante que tem valor 0.58 para homens e 0.49 para mulheres, Wt é a massa em kg do corpo da pessoa, \beta é a taxa de remoção de etanol por hora pelo corpo (que pode ser considerada como 0.017) e t é o tempo desde o consumo.&lt;/p&gt;
+
+&lt;p&gt;Porém, nem sempre é possível calcular a concentração de alcool no meio da festa. Sendo assim, uma aproximação útil é considerar que o corpo elimina cerca de ~5g de etanol por hora e que a ingestão é imediata, o que deve significar aproximadamente uma subtração de ~0.015% do BAC por hora.&lt;/p&gt;
+
+&lt;h2 id=&quot;efeitos-de-curto-prazo-do-alcool&quot;&gt;Efeitos de curto prazo do alcool&lt;/h2&gt;
+
+&lt;p&gt;Vou trapaçear nessa seção. Tem um artigo no Wikipedia com uma tabela bem bacana e bonita com isso &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; na qual só irei dar um copy-paste:&lt;/p&gt;
+
+&lt;p&gt;Com essa tabela em mãos, escolha o seu BAC de preferência e proceda para a próxima seção&lt;/p&gt;
+
+&lt;h2 id=&quot;juntando-tudo--aplicações-práticas-em-festa&quot;&gt;Juntando tudo – aplicações práticas em festa&lt;/h2&gt;
+
+&lt;p&gt;Utilizando das informações nas seções anteriores, uma aplicação prática festiva é delimitar o BAC com os efeitos subjetivos desejáveis, que neste post irei assumir que o desejável é BAC = 0.1% e utilizar-se da fórmula de Widmark para definir a quantidade de alcool a ser ingerida para atingir o BAC bem também estimar uma quantidade de alcool a ser consumida constantemente para manter o BAC aproximadamente constante durante toda a festa.&lt;/p&gt;
+
+&lt;p&gt;Usando a massa do meu corpo como exemplo (60kg), basta resolver a eq. de Widmark com t=0 em função da massa de etanol e igual a 0.1 para obter a massa de etanol necessária para entrar no estágio necessário. O resultado é 36g de etanol (30.4g se eu fosse mulher).&lt;/p&gt;
+
+&lt;p&gt;Ou colocando em outras palavras, resolva a seguinte equação para x (que é a massa de etanol). Se você tiver massa corporal diferente de 60kg ou for mulher não esqueça de mudar o 60 para sua massa ou o 0.58 para 0.49:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/outros/eq_bac_resolvida.png&quot; alt=&quot;Fórmula da embriaguez&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Como a taxa de eliminação de etanol é de $\beta = \frac{0.0017}{h}$, devo calcular também a massa de etanol que devo ingerir a cada hora para manter o BAC,  ou seja, tomar a eq. de Widmark em função da massa de etanol como igual a 0.017. O resultado é ~6.11g de etanol (5.16g se eu fosse mulher).&lt;/p&gt;
+
+&lt;p&gt;Existe um nuance ao aplicar na prática as informações aqui: é difícil saber na prática a massa do etanol sendo ingerido, então temos que usar o fato de que densidade do etanol é de 0.789 g / mL. Só que o etanol é diluído em água, o que resultado em uma densidade do líquido como sendo maior. Uma aproximação boa na prática é considerar densidade 0.9 g / mL para destilados de alto teor alcoolico (cachaça e whiskey por ex.) e assumir 1 g / mL para bebidas fermentadas ou de teor alcoolico perto de 10%. Convertendo os resultados acima assumindo que eu só beba destilados, tem-se que eu preciso ingerir cerca de 40mL (34mL se mulher) de etanol no volume da bebida para ficar com BAC=0.1% e 7mL (6mL se mulher) por hora para me manter nesse nível.&lt;/p&gt;
+
+&lt;p&gt;Como exemplo concreto, considere uma cachaça de teor alcoolico 40%. Para eu ficar com BAC=0.1%, eu precisaria ingerir 100mL de cachaça (85mL se mulher), e para manter isso durante a festa seria necessário 17mL (15mL se mulher) por hora.&lt;/p&gt;
+
+&lt;p&gt;Apesar de eu ter feito as contas para a minha massa e não ter usado modelos mais sofisticados que considerem a altura como os citados na ref. &lt;sup id=&quot;fnref:1:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;, os números aqui já são uma boa estimativa para você começar a tentar ser um bêbado de precisão.&lt;/p&gt;
+
+&lt;p&gt;Porém ainda há uma última pendência:  como medir o volume de bebida consumido na festa? Minha sugestão é você levar uma caneca contigo junto e fazer marcadores nela de 25mL, 50mL e por ai vai. E de quebra você ainda vai ser ecologicamente correto 😉 (em anexo, uma foto de minha caneca mostrando os marcadores, o chá que estou tomando e a cordinha amarrada na própria para nunca a perder)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/outros/caneca.jpg&quot; alt=&quot;Caneca&quot; /&gt;&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:1&quot;&gt;
+      &lt;p&gt;– The Estimation of Blood Alcohol Concentration, Douglas Posey and Ashraf Mozayani. DOI: 10.1385/Forensic Sci. Med. Pathol.:3:1:33 &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt; &lt;a href=&quot;#fnref:1:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;sup&gt;2&lt;/sup&gt;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:2&quot;&gt;
+      &lt;p&gt;– Alcohol use among university students in Sweden measured by an electronic screening instrument, Agneta Andersson, Ann-Britt Wiréhn, Christina Ölvander, Diana Stark Ekman, and Preben Bendtsen &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+    &lt;li id=&quot;fn:3&quot;&gt;
+      &lt;p&gt;– Wikipedia contributors, ‘Blood alcohol content’, Wikipedia, The Free Encyclopedia, 4 June 2017, 15:01 UTC, &lt;a href=&quot;https://en.wikipedia.org/w/index.php?title=Blood_alcohol_content&amp;amp;oldid=783767861&quot;&gt;https://en.wikipedia.org/w/index.php?title=Blood_alcohol_content&amp;amp;oldid=783767861&lt;/a&gt; [accessed 5 June 2017 ] &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;
+</description>
+        <pubDate>Tue, 05 Jun 2018 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2018/ficar-bebado-cientificamente/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/ficar-bebado-cientificamente/</guid>
+        
+        <category>articles</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>O efeito da greve dos caminhoneiros no uso de bicicletas em São Paulo</title>
+        <description>&lt;p&gt;Desde segunda passada (21 de maio), está ocorrendo uma paralisação nacional dos caminhoneiros que ganhou o noticiário e os feeds. Congestionamentos e filas quilômetricas foram formadas por veículos automotores sedentos por gasolina assim como coletivos de transporte público passaram a ter circulação restrita.&lt;/p&gt;
+
+&lt;p&gt;Intuitivamente, tal cenário iria favorecer um uso maior das bicicletas. Mas qual é o efeito númerico disto?&lt;/p&gt;
+
+&lt;p&gt;São Paulo possui um contador de bicicletas na ciclovia Avenida Faria Lima que fornece uma estimativa relativamente acurada do fluxo. O que eu fiz então foi coletar a série histórica dele para obter algum número de antes e depois da greve.&lt;/p&gt;
+
+&lt;p&gt;Tem um notebook em Python em https://gitlab.com/danlessa/computacoes/tree/master/Explorations/BikeCET que detalha como foi o processo de aquisição e análise de dados, mas vou cuspir logo o resultado:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/outros/trafego-bicicletas.png&quot; alt=&quot;Contagem de bicicletas na Faria Lima&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;O domingo da greve foi o domingo mais ocupado do ano por uma margem relativamente folgada, com uns 13% a mais em relação ao segundo colocado. O movimento em média também foi superior ao restante do ano com cerca de 4900 contagens diárias após a greve contra cerca de 3900 antes da greve.&lt;/p&gt;
+
+&lt;p&gt;É interessante notar que ao inspecionar o gráfico tomando o domingo como referência, o movimento da sexta-feira sempre decresce ao comparar com a quinta-feira. A exceção foi quando houve o caos na quinta passada – de modo inédito no ano a contagem de bicicletas na sexta foi maior do que na quinta.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 28 May 2018 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2018/efeito-greve-caminhoneiros-bicicletas/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/efeito-greve-caminhoneiros-bicicletas/</guid>
+        
+        <category>explorations</category>
+        
+        <category>bike</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Auto-conhecimento quantitativo – introspecção na era do Big Data</title>
+        <description>&lt;p&gt;A partir das próximas semanas vou começar a fazer alguns posts de um tema que de certo modo me fascina: o uso da análise de bases de dados pessoais extensas como forma de gerar auto-conhecimento. Especificamente, utilizando eu como cobaia.&lt;/p&gt;
+
+&lt;p&gt;Para fazer isso, eu farei o uso de três base de dados dos quais eu preenchi diariamente por boa parte do ano passado assim como por todo esse ano:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Humor e atividades feitas durante o dia, através do Daylio.&lt;/li&gt;
+  &lt;li&gt;Quantidade e qualidade do sono, através do Sleep as Android.&lt;/li&gt;
+  &lt;li&gt;Atividades físicas e informações gerais de saúde através do Google Fit.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/auto-conhecimento-quantitativo/google-fit.png&quot; alt=&quot;Google Fit&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/auto-conhecimento-quantitativo/daylio.png&quot; alt=&quot;Daylio&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/auto-conhecimento-quantitativo/sleep.png&quot; alt=&quot;Sleep as Android&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Os três programas possibilitam a exportação de todos os dados gerados via .csv, e com isso eu aplicar todo meu arcabouço de ferramentas de análise sobre eles.&lt;/p&gt;
+
+&lt;p&gt;Como uma brincadeira inicial, eu decidi explorar um pouco o meu humor usando os dados do Daylio, que é um diário virtual no qual permite você adicionar pontos no tempo representando seu humor numa escala de 5 pontos (péssimo / ruim / médio / bom / excelente) junto com as atividades que você fez durante o dia, os quais são configuráveis pelo usuário.&lt;/p&gt;
+
+&lt;p&gt;Uma primeira exploração consiste em tirar médias semanais da escala de humor, que pode variar entre 0% e 100%:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/auto-conhecimento-quantitativo/humor-medio.png&quot; alt=&quot;Média semanal do meu humor nos últimos 6 meses&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nitidamente, as férias do final do ano deram um impulso de imédiato no humor, para depois decair para a média de sempre. Um fato curioso é que o maior poço da série histórica está localizada bem na semana anterior de volta as aulas.&lt;/p&gt;
+
+&lt;p&gt;Porém a maior oportunidade para gerar auto-conhecimento reside em associar as atividades ou eventos do dia com o humor. Fazendo isso temos a figura seguinte, o qual é uma tabela contendo o que aconteceu, a contagem do tanto que aconteceu e a pontuação de humor:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/auto-conhecimento-quantitativo/humor-atividades.png&quot; alt=&quot;Humor de acordo com a atividade feita (em %)&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A média do humor geral, para fins de comparação, é de 61.9%. Um cuidado que deve existir ao interpretar a tabela é o caráter subjetivo e pessoal dela assim como o fato dos dados não serem homogêneos – as vezes eu altero as configurações e com isso algumas atividades deixam de ser marcados ou então passam a ser marcadas.&lt;/p&gt;
+
+&lt;p&gt;As atividades com uma interpretação pessoal minha mais distinta são:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Passeio – significa vagamente que eu não frequentei os ambientes de costume ou rotineiros. Pode significar tanto um passeio convencional quanto o mero ato de ir para um lugar diferente fazer algo que não necessariamente é lazer.&lt;/li&gt;
+  &lt;li&gt;Social – é o ato ambíguo de socializar. Pode ou não pode ser lazer – apenas significa que eu me senti socializado.&lt;/li&gt;
+  &lt;li&gt;Cycling – coloco somente quando faço uma pedalada “épica”, normalmente acima de 20km. Associado a passeios ou trajetos longos.&lt;/li&gt;
+  &lt;li&gt;Date – significa que eu dediquei um tempo individualizado para alguém.&lt;/li&gt;
+  &lt;li&gt;Service – destinei tempo a fazer coisas de rotina pessoal – limpar quarto, consertar bicicleta, etc&lt;/li&gt;
+  &lt;li&gt;Formal – atividades onde eu precisei ficar sério, como reuniões por exemplo&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dito isso, acho que as conclusões que consigo tirar da tabela ao considerar as peculiaridades do que vem a significar cada atividade vem a ser:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Procastinar não é legal. Não faz bem para a felicidade e nem para fazer coisas.&lt;/li&gt;
+  &lt;li&gt;Ao invés de procastinar, talvez seja melhor tirar um tempo para passear ou tentar fazer a rotina em um ambiente diferente. * A métrica “passeio” é o fator mais significativo para o bem-estar. Mudar o ambiente faz bem para a mente.&lt;/li&gt;
+  &lt;li&gt;Socializar é importante também. Junto com passear, é o atríbuto mais associado ao bem-estar. Pena que sou tímido, mas não é por falta de vontade.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Para mim foi surpreendente que a variável “passeio” se destacou tão bem ao fazer essa comparação direta. Eu adotei um critério um tanto liberal para caracterizar o meu dia como tendo “passeio” e isso me fornece um aprendizado curioso: existe uma certa efetividade em se rotacionar o ambiente onde frequenta.&lt;/p&gt;
+
+&lt;p&gt;De qualquer modo, isso tudo é o começo. A maior potencialidade das bases de dados é quando se há o cruzamento entre elas e começa-se a considerar a co-dependência entre todos os fatores. Nessa análise simplista, eu apenas calculei uma média sem muitas hípoteses. Ainda assim, achei promissor.&lt;/p&gt;
+
+&lt;p&gt;Até a próxima!&lt;/p&gt;
+</description>
+        <pubDate>Wed, 18 Apr 2018 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2018/auto-conhecimento-quantitativo/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/auto-conhecimento-quantitativo/</guid>
+        
+        <category>explorations</category>
+        
+        <category>personal</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Fazendo mapas interativos de relevo e inclinação usando a API do Google Maps e/ou dados públicos</title>
+        <description>&lt;p&gt;Oi pessoal! Alguns dias atrás eu estava passando o tempo e depressão caçando alguns morros épicos para subir de bicicleta (me julguem) e começei a pensar:&lt;/p&gt;
+
+&lt;p&gt;“Bem que poderia exisitir um jeito fácil de visualizar os morros aqui né?”&lt;/p&gt;
+
+&lt;p&gt;[SPOILER: http://fap.if.usp.br/~danlessa/apps/elevation-map/elevation.html]&lt;/p&gt;
+
+&lt;p&gt;E bem, há muito tempo busco algum mapa de relevo que fosse realmente prático e informativo no sentido de eu olhar nele e pensar “aqui estão as ruas e aqui estão os morros”. Até existem os mapas de contorno, mas a verdade crua é que é horrível enxergar aquelas linhas de contornos quando você está olhando o mapa das ruas também. Sem falar que existem poucas fontes de mapas de contorno com uma precisão adequada para uso urbano.&lt;/p&gt;
+
+&lt;p&gt;Resolvi resolver com o meu próprio teclado. Usando a API do Google Maps, existe uma forma fácil de obter a altitude associada a uma coordenada qualquer (https://developers.google.com/maps/documentation/elevation/start). Fiz então um grid de diversos pontos em SP para obter a elevação e depois passei um interpolador cúbico para ter uma aproximação contínua do mapa de relevo. O resultado é a figura 1, no qual usei a biblioteca tilemapbase para gerar mapas com o OpenStreetMap. O código-fonte tá aqui ó: https://gitlab.com/danlessa/computacoes/tree/master/Explorations/Altitude%20map.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/mapa-interativos/inclinacao-usp.png&quot; alt=&quot;Inclinação perto da USP&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/mapa-interativos/altitude-usp.png&quot; alt=&quot;Elevação perto da USP&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;O legal de usar o Elevation API é que você pode obter dados de qualquer parte do globo. Como brincadeira, fiz os mesmos mapas para Maringá/Marialva lá no Paraná e também para a minha cidade natal de Ariquemes/RO nas figs. 3 até 6:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/mapa-interativos/inclinacao-maringa.png&quot; alt=&quot;Inclinação em Maringá&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/mapa-interativos/altitude-maringa.png&quot; alt=&quot;Elevação em Maringá&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/mapa-interativos/inclinacao-ariquemes.png&quot; alt=&quot;Inclinação em Ariquemes&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/mapa-interativos/elevacao-ariquemes.png&quot; alt=&quot;Elevação em Ariquemes&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Porém, por mais fácil que seja usar a API do Google, ele possui precisão limitada (cerca de 125m em São Paulo). Felizmente, existem dados topológicos abertos disponíveis pela prefeitura de São Paulo, os quais possuem uma precisão e amostragem muito maior (http://geosampa.prefeitura.sp.gov.br/PaginasPublicas/_SBC.aspx#). Como eu fiz as coisas estão no link do repositório que citei acima. O resultado são as figs 7 e 8, que possuem uma resolução excepcional perto do que encontrei por ai.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/mapa-interativos/inclinacao-sp.png&quot; alt=&quot;Inclinação perto da USP&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/mapa-interativos/altitude-sp.png&quot; alt=&quot;Elevação perto da USP&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Só há então um entrave final: hoje em dia ninguém usa uma imagem impressa para se guiar. Para facilitar a vida de todos, fiz um overlay usando API de Javascript do Googlemaps para sobrepor as imagens geradas em um mapa interativo. Resultado final: http://fap.if.usp.br/~danlessa/apps/elevation-map/elevation.html. Se quiser ver como foi feito, é só ver a fonte da página – 100% client-side.&lt;/p&gt;
+
+&lt;p&gt;Fiquei feliz com as coisas.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 14 Apr 2018 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2018/mapas-interativos/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/mapas-interativos/</guid>
+        
+        <category>projects</category>
+        
+        <category>geo</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Impressão a posteriori</title>
+        <description>&lt;p&gt;Teve uma postagem no grupo dos bixos da física perguntando o que motivou os meus colegas a escolherem o curso de física. Eu respondi e acho que ficou bonitinho. Vou compartilhar aqui:&lt;/p&gt;
+
+&lt;p&gt;A grosso modo, minha motivação basal de entrar aqui (USP) foi uma espécie de necessidade subjetiva de querer entender o mundo em diversas facetas e expandir fronteiras mentais.&lt;/p&gt;
+
+&lt;p&gt;Por uma direção, eu vim para a física pois na época eu achava que era o curso magaiver – eu acreditava que seria um curso que me daria uma perspectiva e uma forma de ler em fundamentos que seriam relevantes e até essenciais em várias áreas – biologia, química, tecnologia, economia, etc etc ao mesmo tempo que ela andaria junto com outras áreas de conhecimento mais abstraidas como matemática e arte. Nesse sentido, eu escolhi física por eliminação.&lt;/p&gt;
+
+&lt;p&gt;Ao mesmo tempo, teve também o meu desejo de vir para SP – pois eu morei a vida inteira quase em Rondônia e não conhecia ninguém aqui em um raio de 1500km – por uma necessidade de expandir as minhas perspectivas no sentido de querer entender e viver as transformações no mundo. Eu queria respirar e presenciar ao vivo muitas das coisas nas quais o meu contato foi exclusivamente pela internet – a minha única janela para o mundo enquanto eu estava em Rondônia.&lt;/p&gt;
+
+&lt;p&gt;Estou no final da graduação e acho que já posso dar um veredito diante das expectativas iniciais. Foi bem sucedido no que era a expectativa? Sim. Muito mais do que eu esperava e poderia imaginar inclusive. Tão bem sucedido a ponto de eu mal me reconhecer quando olho lá para trás. É uma sensação bem estranha na verdade.&lt;/p&gt;
+
+&lt;p&gt;Fui bem sucedido na física e na vida? Acho que não. Todo esse ganho de perspectiva me gerou uma profunda insatisfação com o mundo e a sociedade, e hoje tenho dificuldades em me sentir confortável diante de tantas problemáticas. Eu também tive uma dificuldade muito muito maior do que eu esperava de me adaptar para a vida aqui – o choque cultural foi grande – a pessoa que eu era teve que se reinventar e se moldar em praticamente todos os aspectos, e não foi pouca coisa que tive de me adaptar. É muito estranho quando você não consegue entender ou ser entendido pelo coração e quanto a intuição que lhe foi treinada a vida toda simplesmente não mais é eficaz.&lt;/p&gt;
+
+&lt;p&gt;E agora estou encerrando minha graduação questionando a minha motivação basal e suspeitando que muito mais importante que o zelo pela verdade e conhecimento é sim a empatia humana. O zelo alheio sem interesse, sem julgamentos e sem seletividade. O gostar só por gostar, ajudar só por ajudar e rir só por rir.&lt;/p&gt;
+
+&lt;p&gt;Terminando: valeu a pena? Sim, muito. Eu me sinto um ser humano mais completo depois de tudo.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 02 Apr 2018 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2018/impressao-posteriori/</link>
+        <guid isPermaLink="true">http://localhost:4000/2018/impressao-posteriori/</guid>
+        
+        <category>personal</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Evolução histórica do questionário sócioeconômico da Fuvest</title>
+        <description>&lt;h2 id=&quot;resumo&quot;&gt;Resumo&lt;/h2&gt;
+&lt;p&gt;Realizei uma coleta de dados históricos do questionário socioeconômico da Fuvest desde 2001 e com isso foi feito uma exploração a fim de prover insight sobre questões básicas como: onde andam os negros da USP? E o pessoal do colégio público? E as mulheres e os pobres? Ao postular idealismos como a população dos inscritos na FUVEST ser idêntico com a população geral bem como escolha da carreira não sofrer influência da condição humana do candidato, conclui-se unicamente com base nos fatos númericos do questionário de que há uma anomalia negativa significante em relação ao ingresso da população PPI que não será resolvida da maneira que está até o século seguinte. Do mesmo modo, há uma discrepância crescente em tendência entre homens e mulheres concomitante com a desigualidade econômica na USP sutilmente crescer. Mas nem tudo é ruim: até 2020 os estudantes de escolas públicas estarão em nível de igualidade com os das particulares no que tange a probabilidade frequentista de ser aprovado no vestibular.&lt;/p&gt;
+
+&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt;
+&lt;p&gt;Apesar da FUVEST não divulgar de forma acessível e fácil seus dados para análise temporal de forma abrangente, é possível através da utilizando de técnicas de data mining coletar seus dados dos questionários socioeconômicos para descobrir tendências ao passar dos anos (o código está aqui: https://github.com/danilolessa/computacoes/tree/master/analises/fuvest, cuidado com as gambiarras)&lt;/p&gt;
+
+&lt;p&gt;As informações aqui contidas são resultados bastante preliminares e limitadas a informações globais de toda USP. Pede-se cautela ao extrapolar as conclusões aqui enunciadas pois alguns dos resultados são sutis e exigem entendimento dos pressupostos por trás deles. Em específico a FUVEST possui notas de corte diferenciadas por carreiras, o que pode trazer a tona artifícios como o paradoxo de Simpson, o qual requer exploração de forma mais específica afim de investigar a verdade.&lt;/p&gt;
+
+&lt;p&gt;É importante ter em mente de que os resultados aqui foram baseados na comparação entre os inscritos vs matriculados e isso torna a análise incompleta por não considerar a população que deixa de se inscrever na FUVEST.&lt;/p&gt;
+
+&lt;p&gt;Em específico, a análise utilizou-se dos seguintes postulados para retirar conclusões:&lt;/p&gt;
+
+&lt;p&gt;A população de inscritos na FUVEST representa bem a população geral
+As opções de cursos são aleatórias, isto é: a condição de alguém não a torna propícia estatisticamente a escolher determinada carreira
+Para cada seção, foi feito um gráfico e regressão de evolução histórica ano a ano a respeito do tema junto com alguns comentários gerais.&lt;/p&gt;
+
+&lt;h2 id=&quot;cor&quot;&gt;Cor&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/evolucao-questionario-fuvest/cor.png&quot; alt=&quot;Evolução da cor entre os matrículados&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nesse gráfico e regressão é possível reconhecer alguns fatos:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Há nitidamente uma anomalia positiva em relação aos amarelos (asiáticos) e anomalias negativas em relação aos PPI no que tange a fração geral de matrículados vs inscritos.&lt;/li&gt;
+  &lt;li&gt;Os pretos vem crescendo em sua fração numa taxa média de 0.26% ao ano enquanto os pardos vem crescendo em relação a 0.22% ao ano. Ao comparar com a taxa geral e para os brancos de 0.15% além da taxa de 0.11% para os amarelos, parece existir uma tendência para a diminuição da discrepâncias nas anomalias na fração exceto para os indígenas&lt;/li&gt;
+  &lt;li&gt;Os indígenas apresentam uma taxa de 0.13% ao ano, o que significa que em média eles estão perdendo participação em relação a taxa geral. Sinal de políticas ineficientes?&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;No ritmo linear atual, levaria o seguinte tempo para que cada cor tivesse a mesma proporção de participação na fração geral:&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Cor&lt;/th&gt;
+      &lt;th&gt;Brancos&lt;/th&gt;
+      &lt;th&gt;Amarelos&lt;/th&gt;
+      &lt;th&gt;Pretos&lt;/th&gt;
+      &lt;th&gt;Pardos&lt;/th&gt;
+      &lt;th&gt;Indígenas&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;Ano&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt;2087&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+      &lt;td&gt;2100&lt;/td&gt;
+      &lt;td&gt;2047&lt;/td&gt;
+      &lt;td&gt;-&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h2 id=&quot;renda-familiar-mensal&quot;&gt;Renda familiar mensal&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/evolucao-questionario-fuvest/renda-familiar.png&quot; alt=&quot;Evolução da cor entre os matrículados&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nota-se que o grupo com maior crescimento linear na fração matrículados/inscritos é o de renda média inferior a 1SM. Adicionalmente, inscritos com renda média abaixo de 2SM e rendimento acima de 15SM apresentaram crescimento na fração. Em outras palavras, há uma tendência de um aumento nos extremos.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/evolucao-questionario-fuvest/renda-inscritos-matriculados.png&quot; alt=&quot;Evolução da cor entre os matrículados&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ao interpolar a renda familiar mensal média dos matrículados e inscritos, há um outro resultado interessante: o coeficiente angular dos matriculados é ligeiramente maior do que o dos inscritos, o que indica que em média, os inscritos na FUVEST estão com o passar do tempo com menor renda em relação aos matriculados.&lt;/p&gt;
+
+&lt;p&gt;Em suma, parece existir uma tendência do aumento de desigualdade econômica entre os alunos da USP.&lt;/p&gt;
+
+&lt;h2 id=&quot;gênero&quot;&gt;Gênero&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/evolucao-questionario-fuvest/fracao-genero.png&quot; alt=&quot;Evolução da cor entre os matrículados&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Os homens apresentam maior probabilidade em média de serem aprovados na USP do que as mulheres, e essa discrepância está aumentando a cada ano com uma boa concordância com a regressão linear.&lt;/p&gt;
+
+&lt;h2 id=&quot;escolas&quot;&gt;Escolas&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/evolucao-questionario-fuvest/fracao-escola.png&quot; alt=&quot;Evolução da cor entre os matrículados&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ao analisar o coeficiente angular, o único que ficou acima do coeficiente geral foram a dos candidatos provindos somente de escola pública. Nota-se a fração de inscritos vs matrículados dos alunos oriundos de colégios particulares permaneceu relativamente constante enquanto que nos últimos anos os colégios públicos se aproximaram bastante destes em fração (especialmente entre 2006 e 2010).&lt;/p&gt;
+
+&lt;p&gt;Se mantida a tendência linear, levará-se o seguinte tempo para ter equalidade no que tange a fração de inscritos/matrículados em relação ao conjunto total:&lt;/p&gt;
+
+&lt;h2 id=&quot;conclusões&quot;&gt;conclusões&lt;/h2&gt;
+
+&lt;p&gt;Relembrando os postulados do começo:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;A população de inscritos na FUVEST representa bem a população geral&lt;/li&gt;
+  &lt;li&gt;As opções de cursos são aleatórias, isto é: a condição de alguém não a torna propícia estatisticamente a escolher determinada carreira&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Se esses postulados forem verdade (o que não são), tem-se as seguintes conclusões:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;As políticas para os PPI no que tange ingresso a universidade são insuficientes a médio prazo, e no caso dos indígenas não são suficientes nem a longo prazo (a diminuição deles só diminuirá na tendência atual)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;A distribuição de renda no vestibular não parece estar sendo corrigida em tendência e de fato parece que está ocorrendo um acirramento sútil da mesma&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Há uma discrepância crescente entre homens e mulheres&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;As políticas afirmativas para alunos somente de escolas públicas parece estar sendo eficaz, porém o mesmo não ocorre para os que são somente parcialmente.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Apesar dessas conclusões, há de se considerar que elas são válidas perante os postulados afirmados e eles não são verdadeiros. A população de inscritos não representa a população geral e tentar acontar por isso é algo não trivial, do mesmo modo que há carreiras que estatisticamente tem maior propensão a atrair pessoas de determinados grupos, o que pode ocasionar o efeito conhecido como Paradoxo de Simpson (https://en.wikipedia.org/wiki/Simpson%27s_paradox) na qual o resultado consolidado pode estar bastante distante da realidade devido a cursos concorridos atrairem especialmente pessoas de determinados grupos, o que ocasiona uma inflação no número de inscritos deste grupo.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 25 Oct 2017 00:00:00 -0200</pubDate>
+        <link>http://localhost:4000/2017/evolucao-questionario-fuvest/</link>
+        <guid isPermaLink="true">http://localhost:4000/2017/evolucao-questionario-fuvest/</guid>
+        
+        <category>explorations</category>
+        
+        <category>vestibular</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Dissecando a folha salarial da USP</title>
+        <description>&lt;p&gt;Alguns meses atrás, no período da greve, eu fiz uma dissecação da folha salarial da USP buscando descobrir insights a respeito a crise orçamentária na universidade,  dado que o comprometimento do orçamento com os salários está na ordem de ~95%.&lt;/p&gt;
+
+&lt;p&gt;Para tal, eu fiz download da relação completa da folha salarial no Portal Transparência da USP e fiz uma exploração de dados com o stack usual de Python3+Jupyter+Pandas e neste post irei mostrar alguns resultados e fatos obtidos dessa exploração. O código bem como o arquivo salarial utilizado pode ser encontrado em: https://github.com/danilolessa/computacoes/tree/master/analises/transparencia&lt;/p&gt;
+
+&lt;p&gt;Observação: os números salariais e associados com estes se referem ao salário bruto, ou em outras palavras é o que a USP efetivamente paga regularmente ao invés de ser o valor que o assalariado recebe realmente. Tal decisão por utilizar o salário bruto se deve por este ser mais “estável” temporalmente dado que indenizações e benefícios não são contabilizados no bruto e também devido ao fato de que essa exploração visa ganhar insight das despesas da universidade em si, sendo então a informação do salário líquido menos relevante nesse âmbito.&lt;/p&gt;
+
+&lt;p&gt;Uma segunda observação é que sempre que for utilizado um número anual relacionado com os salários, os benefícios como 13º estarão excluídos por consequência da utilização do salário bruto como critério de cálculo.&lt;/p&gt;
+
+&lt;h2 id=&quot;panorama-geral&quot;&gt;Panorama Geral&lt;/h2&gt;
+
+&lt;p&gt;Nessa seção, apresento alguns números gerais do salario bem como a distribuição destes. Note que a utilização da mediana se dá devido a interpretação intuitiva desta. A média não é utilizada pois a distribuição salarial não é simétrica e devido a isso ela tende a enviesar os salários para cima quando utilizado como indicador para contextualizar com a situação na USP.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/salarios_usp.png&quot; alt=&quot;Distribuição geral dos salários na USP&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Gasto anual aproximado com salários: R$ 3.427.651.958,64 (27.417 pessoas)&lt;/p&gt;
+
+&lt;p&gt;Salário mediano na USP: R$ 8.775,31&lt;/p&gt;
+
+&lt;p&gt;Proporção de funcionários/docentes ganhando mais que o governador: 8% (2.778 pessoas)&lt;/p&gt;
+
+&lt;p&gt;Gasto anual aproximado com salários de funcionários/docentes ganhando mais que o governador: R$ 691.372.729,92&lt;/p&gt;
+
+&lt;h2 id=&quot;funcionários-ativos&quot;&gt;Funcionários ativos&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/salario_usp_ativos.png&quot; alt=&quot;Distribuição de salários dos funcionários ativos&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/salario_usp_ativos_2d.png&quot; alt=&quot;Salário e tempo de serviço dos funcionários ativos&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Quantidade: 15.370&lt;/p&gt;
+
+&lt;p&gt;Salário mediano: R$ 6.898,01&lt;/p&gt;
+
+&lt;p&gt;Proporção ganhando mais que o governador: 0.7% (109 pessoas)&lt;/p&gt;
+
+&lt;p&gt;Uma exploração especialmente interessante, é analisar o salário mediano de cada função na USP. O resultado entretanto é muito longo para ser embutido nesse post, então peço que visite esse link: http://soc.if.usp.br/~danlessa/misc/folha-usp.html&lt;/p&gt;
+
+&lt;h2 id=&quot;docentes-ativos&quot;&gt;Docentes ativos&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/salario_usp_docentes.png&quot; alt=&quot;Distribuição dos salários dos docentes&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/salario_usp_docentes_2d.png&quot; alt=&quot;Salário e tempo de serviço dos docentes&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Quantidade: 6.073&lt;/p&gt;
+
+&lt;p&gt;Salário mediano: R$ 13.586,40&lt;/p&gt;
+
+&lt;p&gt;Proporção ganhando mais que o governador: 18.4% (1.118 pessoas)&lt;/p&gt;
+
+&lt;h2 id=&quot;docentes-aposentados&quot;&gt;Docentes aposentados&lt;/h2&gt;
+
+&lt;p&gt;Quantidade: 2.992&lt;/p&gt;
+
+&lt;p&gt;Salário mediano: R$ 16.921,45&lt;/p&gt;
+
+&lt;p&gt;Proporção ganhando mais que o governador: 31.3% (937 pessoas)&lt;/p&gt;
+
+&lt;p&gt;Bônus: gabinete do Reitor&lt;/p&gt;
+
+&lt;p&gt;Adicionalmente, o acesso a folha salarial permitiu visualizar os integrantes do gabinete do Reitor. A relação completa pode ser vista em http://soc.if.usp.br/~danlessa/misc/folha-gabinete-reitor.html&lt;/p&gt;
+
+&lt;p&gt;Note a presença de dois cozinheiros, dois auxiliares de cozinha, dois jornalistas, um garçom e quatro motoristas.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 23 Sep 2016 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2016/dissecando-folha-usp/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/dissecando-folha-usp/</guid>
+        
+        <category>explorations</category>
+        
+        <category>academia</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+      <item>
+        <title>Influência da cor autodeclarada e da renda familiar no ingresso pela Fuvest e nas notas do ENEM 2014</title>
+        <description>&lt;p&gt;Desde semana passada, ao ouvir algum debate a respeito de cotas no ingresso em universidades públicas, uma certa questão me ataca: as cotas raciais/sociais realmente se justificam ao analisar e comparar dados socioeconômicos dos vestibulando?&lt;/p&gt;
+
+&lt;h2 id=&quot;influência-da-renda--fuvest&quot;&gt;Influência da renda – Fuvest&lt;/h2&gt;
+
+&lt;p&gt;No que tange as cotas sociais, o efeito da renda é indiscutível. Basta uma verificada rapida no site da Fuvest para visualizar como que a distribuição de matriculados apresenta um perfil mais elitizado do que a distribuição de ingressantes. (clique aqui para ver estat. de inscritos) (clique aqui para ver estat. de matriculados). Por incrível que pareça, não é possível notar uma vantagem para alunos de colégio particular ao checar a proporção de inscritos x matriculados, porém suponho duas coisas: poucos alunos de colégio público sequer tentam a Fuvest e também acredito que o PASUSP tenha alguma influência nessa equidade. (Ao avaliar as estatísticas oriundas de 2001, nota-se que a proporção de matriculados oriundos de colégios particulares aumenta em relação aos inscritos, o que talvez ateste a hípotese do PASUSP como agente de equidade)&lt;/p&gt;
+
+&lt;p&gt;EDIT: Ao consultar o último censo escolar, nota-se que ~19% dos estudantes paulistas são oriundos de colégios particulares. Apesar disso, ~60% dos inscritos na Fuvest vem de particulares. É algo a se refletir.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/fuvest1.png&quot; alt=&quot;Inscritos na Fuvest 2015&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/fuvest2.png&quot; alt=&quot;Matriculados na Fuvest 2015&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/fuvest3.png&quot; alt=&quot;Inscritos na Fuvest 2001&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/fuvest4.png&quot; alt=&quot;Matriculados na Fuvest 2015&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Porém há a observação de que cursos de alta concorrência no vestibular apresentam perfil de matriculados bem mais elitizado na renda e também maior proporção de alunos oriundos de colégios particulares em relação ao perfil de inscritos.&lt;/p&gt;
+
+&lt;p&gt;Em específico, ao analisar as estatísticas para o ingresso em medicina no FMUSP em 2015, nota-se por exemplo que a proporção de candidatos inscritos no vestibular com renda familiar abaixo de 2SM e acima de 20SM são de 9% e 12.6%. Ao olhar a proporção de matrículados, a proporção respectiva é de 3.7% e 31.3%. Aparentemente, possuir a renda familiar alta pode aumentar a chance de passar no vestibular em ~9x em relação a possuir uma renda familiar baixa (e essas estatísticas não são isoladas, nos anos anteriores são ainda mais discrepantes). É possível notar também que a proporção de oriundos de colégios particulares sobem de 66% para 77% na relação ingressantes x matrículados.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Inscritos para o FMUSP em 2015&lt;/em&gt;
+&lt;img src=&quot;http://localhost:4000/assets/fuvest5.png&quot; alt=&quot;Distribuição de renda dos inscritos na FMUSP em 2015&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Matriculados no FMUSP em 2015&lt;/em&gt;
+&lt;img src=&quot;http://localhost:4000/assets/fuvest6.png&quot; alt=&quot;Distribuição de renda dos matrículados na FMUSP em 2015&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;influência-da-cor-declarada--enem-2014&quot;&gt;Influência da cor declarada – ENEM 2014&lt;/h2&gt;
+
+&lt;p&gt;Normalmente, o argumento principal contra medidas que visem a inclusão racial na universidade se passa pela ideia de que “Não existe discrepância racial, mas sim uma social. Como as minorias e os oprimidos normalmente pertencem a classes sociais menos privilégiadas, então a utilização de medidas que mirem exclusivamente a renda ou oriundos de escolas públicas bastam”. Basicamente é a ideia de que problemas raciais são na verdade sintomas de problemas sociais.&lt;/p&gt;
+
+&lt;p&gt;Uma forma simples de verificar ou não tal argumento em um ponto de vista quantitativo seria através da comparação do ingresso universitário entre vestibulandos de diferentes cores declaradas mas mesma faixa de renda familiar. A utilização somente de estatísticas raciais não é correta pois é bem conhecido de que a população PPI possui menor renda no Brasil do que os brancos, e como visto na seção anterior, a renda influi nos índices de matrícula.&lt;/p&gt;
+
+&lt;p&gt;Infelizmente a Fuvest fornece somente dados consolidados na forma de proporção de candidatos que possuem determinada cor declarada, sendo assim impossível cruzar com a faixa de renda familiar. Porém, o INEP divulga anualmente microdados do ENEM (link), os quais podem ser usados para o cruzamento e portanto fazer a comparação descrita no paragrafo anterior, porém utilizando-se das notas do exame ao invés de índices de matrícula.&lt;/p&gt;
+
+&lt;p&gt;Fiz um script em Python3 (link) que carrega esses microdados, converte em um formato binário para maior eficiência (afinal são ~10 milhões de inscritos) e disso um gráfico que cruze a renda bem como a cor declarada. O resultado das medianas da pontuação total no ENEM 2014 para candidatos no estado de São Paulo é esse:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/enem2014_sp.png&quot; alt=&quot;Distribuição da mediana das notas gerais do ENEM 2014 por renda e cor - São Paulo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Essencialmente, o fato de alguém ser branco dá em mediana quase 200 pontos de vantagem sobre um preto no ENEM (a discrepância é ainda maior se esse alguém for amarelo). O mais surpreendente é que essa discrepância não desaparece conforme a renda aumenta, mas sim se acentua. Na verdade, a discrepância entre todas as cores se acentuam. O que será que causa isso?&lt;/p&gt;
+
+&lt;p&gt;Adicionalmente, fiz também os mesmos gráficos para o Brasil todo, Rondônia, Pernambuco e Minas Gerais:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/enem2014_br.png&quot; alt=&quot;Distribuição da mediana das notas gerais do ENEM 2014 por renda e cor - Brasil&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/enem2014_ro.png&quot; alt=&quot;Distribuição da mediana das notas gerais do ENEM 2014 por renda e cor - Rondônia&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/enem2014_pe.png&quot; alt=&quot;Distribuição da mediana das notas gerais do ENEM 2014 por renda e cor - Pernambuco&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://localhost:4000/assets/enem2014_mg.png&quot; alt=&quot;Distribuição da mediana das notas gerais do ENEM 2014 por renda e cor - Minas Gerais&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Ao observar Minas Gerais e o Brasil todo, nota-se que os índios estão numa situação ainda pior que os pretos e pardos no que tange a pontuação total no ENEM. (Eu não grafiquei amarelos e indios nos outros devido a pequena população nos outros estados. Recomendo também cautela ao avaliar os amarelos, dado que tal cor é associada no Brasil a várias culturas diferentes, tanto latinas quanto orientais, enquanto que em SP é quase que exclusivamente aos orientais)&lt;/p&gt;
+
+&lt;p&gt;A hípotese de discrepância racial como sendo sintoma de discrepância social obviamente não se concretiza. A renda não parece ser o único responsável isolado por termos menos pessoas PPI nas universidades do que o esperado. Pelo contrário, a renda acentua as diferenças raciais.&lt;/p&gt;
+
+&lt;p&gt;Eu sinceramente não sei muito como explicar esse resultado estranho. Minha hípotese pessoal é de que talvez cada cor tenha maior associação com culturas específicas que influenciam na hora do vestibular. Talvez os amarelos possuam uma nota maior pois há uma cultura associada de pressão dura sobre os jovens no que tange aprovações. Talvez haja uma estigmatização dos PPI que influencie diretamente na hora do vestibular, ou talvez a cultura dos PPI simplesmente não esteja de acordo com o avaliado no ENEM. De qualquer modo, me abstenho de tentar fornecer uma conclusão definitiva.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 23 Apr 2016 00:00:00 -0300</pubDate>
+        <link>http://localhost:4000/2016/influencia-cor-renda-fuvest-enem/</link>
+        <guid isPermaLink="true">http://localhost:4000/2016/influencia-cor-renda-fuvest-enem/</guid>
+        
+        <category>explorations</category>
+        
+        <category>vestibular</category>
+        
+        
+        <category>blog</category>
+        
+      </item>
+    
+  </channel>
+</rss>
