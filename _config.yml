@@ -18,6 +18,8 @@ permalink   : :year/:title/
 markdown    : kramdown
 highlighter : rouge
 
+include: ['coursera']
+
 source      : ./
 destination : ./_site
 
