@@ -3,10 +3,8 @@ layout: page
 title: Bio
 author: Danilo Lessa Bernardineli
 order: 2
-
+tags: pages
 ---
-
-
 
 # Bio
 
@@ -28,16 +26,17 @@ Tags
 * Regularly gets the rep of being an Python wizard.
 
 ## Professional Experience
-* Data Scientist at IDwall. (2018-*current*)
-* PhD researcher at the the Institute of Physics / Institute of Biomedical Sciences at University of São Paulo. (2018-*current*)
-* Teaching Assistant at the Institute of Physics. (2017-*current*) [^1]
+* Research Engineer at BlockScience (2020-*current*)
+* Data Scientist at IDwall. (2018-2020)
+* PhD researcher at the the Institute of Physics / Institute of Biomedical Sciences at University of São Paulo. (2018-2021)
+* Teaching Assistant at the Institute of Physics. (2017-2020) [^1]
 * Undergratuate researcher at the Atmospheric Physics Lab of University of São Paulo. (2016-2018)
 * Full-stack Developer at Laptop Informática. (2014-2017) 
 
 [^1]: Data analysis techniques on Physics (junior-level undegraduate couse) and Electromagnetism. (senior-level undergraduate course)
 
 ## Voluntary Experience
-* Co-founder of the hackerspace.IFUSP. (2018-*current*)
+* Co-founder of the hackerspace.IFUSP. (2018)
 * Student's representative at the University of São Paulo on several instances. (2017-2018) [^2]
 * Director with roles at the Physics Students Association (2017-2019). [^3]
 * Master Councilor of the DeMolay Order (2011). [^4]
@@ -51,7 +50,7 @@ Roles: General Secretary (2019), Fiscal Councilor (2018) and Treasurer (2017).
 
 
 ## Education
-* PhD on Physics / Bioinformatics - University of São Paulo (2019-*current*)
+* PhD on Physics / Bioinformatics - University of São Paulo (2019-2021)
 * BSc on Physics - University of São Paulo (2014-2019)
 
 
