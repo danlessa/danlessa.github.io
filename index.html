@@ -197,10 +197,12 @@
   <!-- ───── NOW ───── -->
   <section class="sec now" id="now">
     <div class="sechead"><b>Now</b><span id="nowDate"></span></div>
-    <p><b>Placeholder — edit me.</b> A short paragraph on what currently has your
-    attention: a model you're building, a piece you're writing, a campaign or
-    collective you're organizing with. Keep it dated and honest; it does the
-    heavy lifting for the researcher/activist credibility.</p>
+    <p>Building agent-based and system-dynamics models of complex socio-technical
+    systems — as a <b>research engineer</b>, and as the through-line across the
+    cycling, cities and data work below. Reading and writing at the seam between
+    <b>physics, data and public policy</b>, and riding whenever São Paulo's hills
+    allow. <em>(Refresh this line when the season changes — it's the one part that
+    should always feel current.)</em></p>
   </section>
 
   <!-- ───── FOOTER ───── -->
@@ -208,8 +210,9 @@
     <div class="links">
       <a href="mailto:danilo.lessa@gmail.com">email</a>
       <a href="https://github.com/danlessa">github</a>
-      <a href="https://orcid.org/">orcid ↗</a>
-      <a href="https://zenodo.org/">zenodo ↗</a>
+      <a href="https://twitter.com/danilolessa">twitter ↗</a>
+      <a href="https://www.ciclocidade.org.br">ciclocidade ↗</a>
+      <a href="https://www.uniaodeciclistas.org.br">ucb ↗</a>
       <a href="https://pedalhidro.github.io">pedal hidrográfico ↗</a>
     </div>
     <div class="sig" id="sig"></div>
@@ -238,19 +241,57 @@ const FACETS = [
 
 /* Hand-curated work. The `research` facet is auto-filled from GitHub below,
    so you mainly maintain expression / actions / facts here.
-   kind: free label · facet: one of the FACETS keys · meta: small right-hand note */
+   kind: free label · facet: one of the FACETS keys · meta: small right-hand note
+   Archived essays/analyses link to their source on GitHub (the old blog was
+   retired in this redesign); swap any of these for live URLs as you please. */
+const ARCHIVE = "https://github.com/danlessa/danlessa.github.io/blob/ecd415a/_posts/";
 const CURATED = [
-  // ── EXPRESSION ──
-  {facet:"expression", kind:"essay", title:"Untitled prose", url:"#",
-   desc:"Placeholder — link an essay or piece of geospace/physics writing.", meta:""},
-  // ── ACTIONS ──
-  {facet:"actions", kind:"campaign", title:"Sustainable cities", url:"#",
-   desc:"Placeholder — a campaign, coalition, or civic project you organize with.", meta:""},
-  {facet:"actions", kind:"collective", title:"Pedal Hidrográfico", url:"https://pedalhidro.github.io",
-   desc:"Placeholder — describe the collective and your role in it.", meta:""},
-  // ── FACTS ──
-  {facet:"facts", kind:"dataset", title:"Untitled dataset", url:"#",
-   desc:"Placeholder — a dataset, dashboard, or analysis backing the advocacy.", meta:""},
+  // ── EXPRESSION — prose & essays ──
+  {facet:"expression", kind:"essay", title:"Minha visão do mundo",
+   url:ARCHIVE+"2019-06-30-visao_mundo.md", meta:"2019",
+   desc:"A worldview in the open — how systems, networks and physics shape the way I read the world."},
+  {facet:"expression", kind:"essay", title:"O risco como paradigma estruturante",
+   url:ARCHIVE+"2020-03-09-risco_paradigma_estruturante.md", meta:"2020",
+   desc:"On risk as the organising principle of a globalised society — a long-form essay."},
+  {facet:"expression", kind:"essay", title:"Legado",
+   url:ARCHIVE+"2019-06-28-legado.md", meta:"2019",
+   desc:"A personal reflection on legacy and what is worth leaving behind."},
+
+  // ── RESEARCH — curated writing; live repos are appended below ──
+  {facet:"research", kind:"modelling", title:"Modelling the commuter bicycling system",
+   url:ARCHIVE+"2019-11-06-bike_modelling_review.md", meta:"2019",
+   desc:"A review toward simulation models of urban cycling as input to public policy."},
+  {facet:"research", kind:"systems", title:"Systems thinking & modelling in Brazil",
+   url:ARCHIVE+"2020-03-06-systems_thinking_modeling_in_sao_paulo.md", meta:"2020",
+   desc:"The state of and obstacles to systems thinking & modelling adoption in São Paulo / Brazil institutions."},
+
+  // ── ACTIONS — sustainable cities & advocacy ──
+  {facet:"actions", kind:"collective", title:"Ciclocidade — GT Rodovias",
+   url:"https://www.ciclocidade.org.br", meta:"member",
+   desc:"Association of São Paulo Urban Cyclists — member of the Highways working group."},
+  {facet:"actions", kind:"collective", title:"União de Ciclistas do Brasil",
+   url:"https://www.uniaodeciclistas.org.br", meta:"GT Pesquisa",
+   desc:"Brazilian Cyclists Union — member of the Research working group."},
+  {facet:"actions", kind:"advocacy", title:"Bikes on intercity buses — ranking",
+   url:ARCHIVE+"2019-05-22-lista-ranking-onibus-rodoviario-bicicleta.md", meta:"2019",
+   desc:"A survey and ranking of intercity bus companies by how bicycle-friendly they are."},
+  {facet:"actions", kind:"collective", title:"Pedal Hidrográfico",
+   url:"https://pedalhidro.github.io", meta:"collective",
+   desc:"A cycling collective — see its own repositories and work."},
+
+  // ── FACTS — data, measurements & findings ──
+  {facet:"facts", kind:"analysis", title:"Dissecando a folha salarial da USP",
+   url:ARCHIVE+"2016-09-23-dissecando-folha-usp.md", meta:"2016",
+   desc:"Dissecting the University of São Paulo payroll — an open data exploration."},
+  {facet:"facts", kind:"analysis", title:"Cor, renda e ingresso na Fuvest / ENEM",
+   url:ARCHIVE+"2016-04-23-influencia-cor-renda-fuvest-enem.md", meta:"2016",
+   desc:"How self-declared race and family income relate to university admission and ENEM 2014 scores."},
+  {facet:"facts", kind:"analysis", title:"Greve dos caminhoneiros × uso de bicicletas",
+   url:ARCHIVE+"2018-05-28-efeito-greve-caminhoneiros-bicicletas.md", meta:"2018",
+   desc:"Measuring the effect of the 2018 truckers' strike on bicycle use in São Paulo."},
+  {facet:"facts", kind:"maps", title:"Mapas interativos de relevo e inclinação",
+   url:ARCHIVE+"2018-04-14-mapas-interativos.md", meta:"2018",
+   desc:"Building interactive relief & slope maps from the Google Maps API and public data."},
 ];
 /* ══════════════════════════════ */
 
