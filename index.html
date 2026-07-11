@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>danlessa.github.io</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ───── CONFIG (concrete palette) ───── */
+  :root{
+    --concrete:#c3c2bb;        /* cured surface, lit */
+    --concrete-2:#b7b6ae;      /* surface, half-shadow */
+    --shadow:#1a1a17;          /* deep shadow / lifted mass */
+    --shadow-2:#26261f;        /* band-into-shadow on hover */
+    --ink:#15140f;
+    --ink-soft:#4c4b43;
+    --light:#e7e6df;           /* formed light edge */
+    --oxide:#b3402a;           /* exposed rebar / surveyor's red */
+    --line:rgba(21,20,15,.22);
+    --line-faint:rgba(21,20,15,.10);
+    --plank:96px;              /* board-form rhythm */
+    --cols:6;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;border-radius:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--concrete);
+    color:var(--ink);
+    font-family:"IBM Plex Mono",monospace;font-size:13px;line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    /* marcas de fôrma: board-form plank lines */
+    background-image:repeating-linear-gradient(to bottom,
+      transparent 0 calc(var(--plank) - 1px),
+      rgba(21,20,15,.05) calc(var(--plank) - 1px) var(--plank));
+  }
+  /* aggregate grain */
+  .grain{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.05;mix-blend-mode:multiply}
+
+  .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 clamp(1.2rem,4vw,2.6rem)}
+  /* drawn structural column grid */
+  .columns{position:absolute;inset:0 clamp(1.2rem,4vw,2.6rem);z-index:-1;pointer-events:none;
+    background-image:repeating-linear-gradient(to right,
+      var(--line-faint) 0 1px, transparent 1px calc(100%/var(--cols)));}
+
+  /* plan-grid tick header */
+  .ticks{display:grid;grid-template-columns:repeat(var(--cols),1fr);
+    padding:1.5rem 0 .9rem;border-bottom:1px solid var(--line);
+    font-size:.62rem;letter-spacing:.2em;color:var(--ink-soft)}
+  .ticks span{padding-left:.2rem}
+
+  /* ───── MASTHEAD: lifted slab on pilotis ───── */
+  header{padding:clamp(2.5rem,6vw,4.5rem) 0 0}
+  .slab{
+    background:var(--shadow);color:var(--light);
+    padding:clamp(1.6rem,4vw,2.6rem) clamp(1.4rem,4vw,2.4rem) clamp(2rem,5vw,3rem);
+    box-shadow:18px 18px 0 0 rgba(21,20,15,.18);   /* hard cast shadow, zero blur */
+  }
+  .label{font-size:.66rem;letter-spacing:.28em;color:var(--oxide);margin-bottom:1.4rem}
+  h1{
+    font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;
+    font-size:clamp(3rem,12vw,7.5rem);line-height:.86;letter-spacing:-.02em;
+  }
+  .manifest{margin-top:1.6rem;max-width:46ch;font-size:.82rem;line-height:1.6;color:#bdbcb3}
+  .manifest b{color:var(--light);font-weight:500}
+  /* pilotis: heavy supports under the slab, open ground between */
+  .pilotis{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(2rem,9vw,5rem);
+    height:clamp(1.4rem,3vw,2.2rem);margin:0 clamp(1rem,5vw,3rem)}
+  .pilotis i{background:var(--shadow)}
+
+  .count{display:flex;justify-content:space-between;align-items:baseline;
+    padding:2.6rem 0 0;font-size:.66rem;letter-spacing:.2em;color:var(--ink-soft)}
+  .count b{font-family:"Archivo Black",sans-serif;font-size:.9rem;letter-spacing:0;color:var(--ink)}
+
+  /* ───── ACERVO: continuous levels ───── */
+  .acervo{border-top:3px solid var(--ink);margin-top:.9rem}
+  .obra{
+    display:grid;grid-template-columns:3.2rem minmax(0,2fr) minmax(0,2.4fr) auto;
+    gap:clamp(.9rem,2.5vw,1.8rem);align-items:start;
+    padding:1.7rem 0;border-bottom:1px solid var(--line);
+    text-decoration:none;color:inherit;
+    transition:background .05s linear,color .05s linear,padding-left .05s linear;
+  }
+  .obra:hover{background:var(--shadow-2);color:var(--light);padding-left:1rem}
+  .obra:hover .bay,.obra:hover .meta,.obra:hover .desc{color:#c9c7bd}
+  .obra:hover .link{color:#ff7a5c}
+
+  .bay{font-size:.82rem;color:var(--ink-soft);padding-top:.45rem;letter-spacing:.04em}
+  .name{font-family:"Archivo Black",sans-serif;font-size:clamp(1.1rem,2.4vw,1.6rem);
+    line-height:1.04;letter-spacing:-.01em;text-transform:uppercase}
+  .topics{margin-top:.7rem;font-size:.64rem;letter-spacing:.1em;color:var(--ink-soft)}
+  .topics span:not(:last-child)::after{content:" · "}
+  .desc{font-size:.8rem;line-height:1.55;color:var(--ink-soft);padding-top:.35rem}
+  .desc.loading{opacity:.5}
+  .end{text-align:right;white-space:nowrap;padding-top:.4rem}
+  .meta{font-size:.66rem;letter-spacing:.08em;color:var(--ink-soft);line-height:1.9}
+  .meta i{display:inline-block;width:.5rem;height:.5rem;background:var(--ink-soft);margin-right:.35rem}
+  .link{font-family:"Archivo Black",sans-serif;font-size:.72rem;color:var(--oxide);
+    margin-top:.6rem;text-transform:uppercase;letter-spacing:.02em}
+
+  .status{padding:3rem 0;font-size:.78rem;letter-spacing:.06em;color:var(--ink-soft)}
+  .status.err{color:var(--oxide)}
+  .status a,footer a{color:var(--ink);text-decoration:underline}
+
+  footer{margin:3.5rem 0 5rem;padding-top:1.4rem;border-top:1px solid var(--line);
+    font-size:.64rem;letter-spacing:.16em;color:var(--ink-soft);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+
+  @media(max-width:720px){
+    :root{--cols:3}
+    .obra{grid-template-columns:2.4rem 1fr;gap:.5rem .9rem}
+    .obra .desc,.obra .end{grid-column:2}
+    .end{text-align:left}
+    .slab{box-shadow:10px 10px 0 0 rgba(21,20,15,.18)}
+  }
+</style>
+</head>
+<body>
+<svg class="grain" aria-hidden="true"><filter id="n"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3"/></filter><rect width="100%" height="100%" filter="url(#n)"/></svg>
+
+<div class="wrap">
+  <div class="columns" aria-hidden="true"></div>
+
+  <div class="ticks" aria-hidden="true">
+    <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span>
+  </div>
+
+  <header>
+    <div class="slab">
+      <h1>danlessa<br>.github.io</h1>
+      <p class="manifest">Listagem de repositórios de código</p>
+    </div>
+  </header>
+  <div class="pilotis" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+
+  <div class="count">
+    <span id="count">CARREGANDO</span>
+    <span>REPOS / DANLESSA</span>
+  </div>
+
+  <main id="acervo" class="acervo" hidden></main>
+  <div id="status" class="status">Carregando acervo…</div>
+
+  <footer>
+    <span id="fonte">FONTE: api.github.com/users/danlessa</span>
+    <span id="gerado"></span>
+  </footer>
+</div>
+
+<script>
+/* ───────── CONFIG ───────── */
+const USER = "danlessa";
+const EXCLUDE = [`${USER}.github.io`];
+const SHOW_FORKS = false;
+const SHOW_ARCHIVED = false;
+const README_CANDIDATES = ["README.md","readme.md","README.markdown","README.rst","README.txt","README"];
+/* ────────────────────────── */
+
+document.getElementById("fonte").textContent = `FONTE: api.github.com/users/${USER}`;
+document.getElementById("gerado").textContent = `GERADO ${new Date().toISOString().slice(0,10)}`;
+
+const acervo = document.getElementById("acervo");
+const statusEl = document.getElementById("status");
+const countEl = document.getElementById("count");
+
+async function load(){
+  let repos;
+  try{
+    let res = await fetch(`https://api.github.com/users/${USER}/repos?per_page=100&sort=pushed`,
+                          {headers:{Accept:"application/vnd.github+json"}});
+    if(res.status === 403) throw new Error("rate");
+    if(!res.ok){
+      res = await fetch(`https://api.github.com/orgs/${USER}/repos?per_page=100&sort=pushed`,
+                        {headers:{Accept:"application/vnd.github+json"}});
+      if(res.status === 403) throw new Error("rate");
+      if(!res.ok) throw new Error("HTTP "+res.status);
+    }
+    repos = await res.json();
+  }catch(e){
+    statusEl.className = "status err";
+    statusEl.innerHTML = e.message === "rate"
+      ? `LIMITE DE REQUISIÇÕES DO GITHUB ATINGIDO NESTA REDE. TENTE EM ALGUNS MINUTOS.`
+      : `FALHA AO CARREGAR (${e.message}). VER <a href="https://github.com/${USER}">github.com/${USER}</a>.`;
+    return;
+  }
+
+  repos = repos
+    .filter(r => !EXCLUDE.includes(r.name))
+    .filter(r => SHOW_FORKS || !r.fork)
+    .filter(r => SHOW_ARCHIVED || !r.archived)
+    .sort((a,b)=> new Date(b.pushed_at) - new Date(a.pushed_at));
+
+  if(!repos.length){ statusEl.textContent = "NENHUM REPO PÚBLICA ENCONTRADA."; return; }
+
+  statusEl.style.display = "none";
+  acervo.hidden = false;
+  countEl.textContent = `${String(repos.length).padStart(2,"0")} REPOS`;
+
+  repos.forEach((repo,i)=>{
+    const pageUrl = repo.has_pages ? `https://${USER}.github.io/${repo.name}/` : null;
+    const href = pageUrl || repo.html_url;
+    const pushed = repo.pushed_at ? repo.pushed_at.slice(0,7).replace("-",".") : "";
+
+    const topics = (repo.topics||[]).slice(0,4).map(t=>`<span>${t}</span>`).join("");
+    const meta = [];
+    if(repo.language) meta.push(`<div class="meta"><i></i>${repo.language}</div>`);
+    if(repo.stargazers_count) meta.push(`<div class="meta">★ ${repo.stargazers_count}</div>`);
+    if(pushed) meta.push(`<div class="meta">${pushed}</div>`);
+
+    const a = document.createElement("a");
+    a.className = "obra";
+    a.href = href;
+    a.innerHTML = `
+      <div class="bay">${String(i+1).padStart(2,"0")}</div>
+      <div>
+        <div class="name">${repo.name}</div>
+        ${topics ? `<div class="topics">${topics}</div>` : ""}
+      </div>
+      <div class="desc ${repo.description ? "" : "loading"}" data-need-readme="${repo.description ? "" : "1"}">
+        ${repo.description ? escapeHtml(repo.description) : "lendo README…"}
+      </div>
+      <div class="end">
+        ${meta.join("")}
+        <div class="link">${pageUrl ? "ver repo ↗" : "código ↗"}</div>
+      </div>`;
+    acervo.appendChild(a);
+
+    const descEl = a.querySelector(".desc");
+    if(descEl.dataset.needReadme) enrichReadme(descEl, repo);
+  });
+}
+
+async function enrichReadme(el, repo){
+  const branch = repo.default_branch || "HEAD";
+  for(const name of README_CANDIDATES){
+    try{
+      const r = await fetch(`https://raw.githubusercontent.com/${USER}/${repo.name}/${branch}/${name}`);
+      if(!r.ok) continue;
+      const s = firstParagraph(await r.text());
+      if(s){ el.classList.remove("loading"); el.textContent = s; } else { el.textContent = "—"; }
+      return;
+    }catch(_){}
+  }
+  el.textContent = "—";
+}
+
+function firstParagraph(md){
+  const lines = md.replace(/\r/g,"").split("\n");
+  const buf = [];
+  for(const line of lines){
+    const t = line.trim();
+    if(!t){ if(buf.length) break; else continue; }
+    if(/^#{1,6}\s/.test(t)){ if(buf.length) break; else continue; }
+    if(/^(<!--|<img|<p|<div|<a |<picture|<table)/i.test(t)) continue;
+    if(/^!\[|^\[!\[/.test(t)) continue;
+    if(/^[-*_]{3,}$/.test(t)) continue;
+    if(/^>/.test(t)) continue;
+    buf.push(t);
+  }
+  let s = buf.join(" ")
+    .replace(/!\[[^\]]*\]\([^)]*\)/g,"")
+    .replace(/\[([^\]]+)\]\([^)]*\)/g,"$1")
+    .replace(/[*_`#>]/g,"")
+    .replace(/\s+/g," ").trim();
+  if(s.length > 150) s = s.slice(0,147).replace(/\s+\S*$/,"") + "…";
+  return s;
+}
+
+function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+
+load();
+</script>
+</body>
+</html>
