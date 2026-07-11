@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>danlessa.github.io</title>
+<title>danlessa — simulations, prose &amp; sustainable cities</title>
+<meta name="description" content="Danilo Lessa Bernardineli — simulations & systems engineering, geospace & physics prose, sustainable cities activist.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -30,89 +31,122 @@
     color:var(--ink);
     font-family:"IBM Plex Mono",monospace;font-size:13px;line-height:1.5;
     -webkit-font-smoothing:antialiased;
-    /* marcas de fôrma: board-form plank lines */
     background-image:repeating-linear-gradient(to bottom,
       transparent 0 calc(var(--plank) - 1px),
       rgba(21,20,15,.05) calc(var(--plank) - 1px) var(--plank));
   }
-  /* aggregate grain */
   .grain{position:fixed;inset:0;z-index:0;pointer-events:none;opacity:.05;mix-blend-mode:multiply}
 
   .wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 clamp(1.2rem,4vw,2.6rem)}
-  /* drawn structural column grid */
   .columns{position:absolute;inset:0 clamp(1.2rem,4vw,2.6rem);z-index:-1;pointer-events:none;
     background-image:repeating-linear-gradient(to right,
       var(--line-faint) 0 1px, transparent 1px calc(100%/var(--cols)));}
 
-  /* plan-grid tick header */
-  .ticks{display:grid;grid-template-columns:repeat(var(--cols),1fr);
-    padding:1.5rem 0 .9rem;border-bottom:1px solid var(--line);
+  /* plan-grid tick / sticky anchor bar */
+  .ticks{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.6rem;
+    position:sticky;top:0;z-index:5;background:var(--concrete);
+    padding:.9rem 0;border-bottom:1px solid var(--line);
     font-size:.62rem;letter-spacing:.2em;color:var(--ink-soft)}
-  .ticks span{padding-left:.2rem}
+  .ticks nav{display:flex;gap:clamp(.7rem,2.5vw,1.6rem)}
+  .ticks a{color:var(--ink-soft);text-decoration:none}
+  .ticks a:hover{color:var(--oxide)}
+  .ticks .who{color:var(--ink)}
 
   /* ───── MASTHEAD: lifted slab on pilotis ───── */
-  header{padding:clamp(2.5rem,6vw,4.5rem) 0 0}
+  header{padding:clamp(2.2rem,6vw,4rem) 0 0}
   .slab{
     background:var(--shadow);color:var(--light);
     padding:clamp(1.6rem,4vw,2.6rem) clamp(1.4rem,4vw,2.4rem) clamp(2rem,5vw,3rem);
-    box-shadow:18px 18px 0 0 rgba(21,20,15,.18);   /* hard cast shadow, zero blur */
+    box-shadow:18px 18px 0 0 rgba(21,20,15,.18);
   }
-  .label{font-size:.66rem;letter-spacing:.28em;color:var(--oxide);margin-bottom:1.4rem}
+  .label{font-size:.66rem;letter-spacing:.28em;color:var(--oxide);margin-bottom:1.2rem}
   h1{
     font-family:"Archivo Black",sans-serif;font-weight:400;text-transform:uppercase;
-    font-size:clamp(3rem,12vw,7.5rem);line-height:.86;letter-spacing:-.02em;
+    font-size:clamp(2.6rem,11vw,6.6rem);line-height:.86;letter-spacing:-.02em;
   }
-  .manifest{margin-top:1.6rem;max-width:46ch;font-size:.82rem;line-height:1.6;color:#bdbcb3}
-  .manifest b{color:var(--light);font-weight:500}
-  /* pilotis: heavy supports under the slab, open ground between */
+  .synthesis{margin-top:1.6rem;max-width:52ch;font-size:clamp(.82rem,1.6vw,.98rem);line-height:1.7;color:#cbc9bf}
+  .synthesis b{color:var(--light);font-weight:500}
+  .synthesis .bar{color:var(--oxide);padding:0 .35rem;font-weight:600}
   .pilotis{display:grid;grid-template-columns:repeat(5,1fr);gap:clamp(2rem,9vw,5rem);
     height:clamp(1.4rem,3vw,2.2rem);margin:0 clamp(1rem,5vw,3rem)}
   .pilotis i{background:var(--shadow)}
 
-  .count{display:flex;justify-content:space-between;align-items:baseline;
-    padding:2.6rem 0 0;font-size:.66rem;letter-spacing:.2em;color:var(--ink-soft)}
-  .count b{font-family:"Archivo Black",sans-serif;font-size:.9rem;letter-spacing:0;color:var(--ink)}
+  /* section headers */
+  .sec{padding-top:clamp(2.6rem,6vw,4rem)}
+  .sechead{display:flex;justify-content:space-between;align-items:baseline;
+    padding-bottom:.9rem;font-size:.66rem;letter-spacing:.2em;color:var(--ink-soft)}
+  .sechead b{font-family:"Archivo Black",sans-serif;font-size:.82rem;letter-spacing:.04em;color:var(--ink);text-transform:uppercase}
 
-  /* ───── ACERVO: continuous levels ───── */
-  .acervo{border-top:3px solid var(--ink);margin-top:.9rem}
-  .obra{
-    display:grid;grid-template-columns:3.2rem minmax(0,2fr) minmax(0,2.4fr) auto;
-    gap:clamp(.9rem,2.5vw,1.8rem);align-items:start;
-    padding:1.7rem 0;border-bottom:1px solid var(--line);
-    text-decoration:none;color:inherit;
-    transition:background .05s linear,color .05s linear,padding-left .05s linear;
+  /* ───── FACETS: the grid IS the statement ───── */
+  .facets{display:grid;grid-template-columns:repeat(2,1fr);border-top:3px solid var(--ink);border-left:1px solid var(--line)}
+  .facet{
+    border-right:1px solid var(--line);border-bottom:1px solid var(--line);
+    background:transparent;text-align:left;cursor:pointer;color:inherit;
+    padding:clamp(1.3rem,3vw,2rem) clamp(1.2rem,2.6vw,1.8rem) clamp(1.5rem,3.4vw,2.2rem);
+    font-family:inherit;display:flex;flex-direction:column;gap:.7rem;min-height:100%;
+    transition:background .06s linear,color .06s linear;
   }
-  .obra:hover{background:var(--shadow-2);color:var(--light);padding-left:1rem}
-  .obra:hover .bay,.obra:hover .meta,.obra:hover .desc{color:#c9c7bd}
-  .obra:hover .link{color:#ff7a5c}
+  .facet:hover{background:var(--concrete-2)}
+  .facet.active{background:var(--shadow);color:var(--light)}
+  .facet .num{font-size:.64rem;letter-spacing:.24em;color:var(--oxide)}
+  .facet .flabel{font-family:"Archivo Black",sans-serif;text-transform:uppercase;
+    font-size:clamp(1.3rem,3.4vw,2.1rem);line-height:.98;letter-spacing:-.01em}
+  .facet .fdesc{font-size:.72rem;line-height:1.5;color:var(--ink-soft);max-width:30ch}
+  .facet.active .fdesc{color:#c2c0b6}
+  .facet .fcount{margin-top:auto;font-size:.62rem;letter-spacing:.14em;color:var(--ink-soft)}
+  .facet.active .fcount{color:#9a988e}
 
-  .bay{font-size:.82rem;color:var(--ink-soft);padding-top:.45rem;letter-spacing:.04em}
-  .name{font-family:"Archivo Black",sans-serif;font-size:clamp(1.1rem,2.4vw,1.6rem);
-    line-height:1.04;letter-spacing:-.01em;text-transform:uppercase}
-  .topics{margin-top:.7rem;font-size:.64rem;letter-spacing:.1em;color:var(--ink-soft)}
-  .topics span:not(:last-child)::after{content:" · "}
-  .desc{font-size:.8rem;line-height:1.55;color:var(--ink-soft);padding-top:.35rem}
-  .desc.loading{opacity:.5}
-  .end{text-align:right;white-space:nowrap;padding-top:.4rem}
-  .meta{font-size:.66rem;letter-spacing:.08em;color:var(--ink-soft);line-height:1.9}
-  .meta i{display:inline-block;width:.5rem;height:.5rem;background:var(--ink-soft);margin-right:.35rem}
-  .link{font-family:"Archivo Black",sans-serif;font-size:.72rem;color:var(--oxide);
-    margin-top:.6rem;text-transform:uppercase;letter-spacing:.02em}
+  /* ───── WORK ───── */
+  .filterbar{display:flex;justify-content:space-between;align-items:baseline;flex-wrap:wrap;gap:.6rem;
+    padding:1.4rem 0 .9rem;font-size:.66rem;letter-spacing:.16em;color:var(--ink-soft)}
+  .filterbar button{background:none;border:1px solid var(--line);color:var(--ink-soft);cursor:pointer;
+    font-family:inherit;font-size:.6rem;letter-spacing:.16em;padding:.35rem .7rem;text-transform:uppercase}
+  .filterbar button[hidden]{display:none}
+  .filterbar button:hover{border-color:var(--ink);color:var(--ink)}
 
-  .status{padding:3rem 0;font-size:.78rem;letter-spacing:.06em;color:var(--ink-soft)}
+  .workgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+    gap:1px;background:var(--line);border:1px solid var(--line)}
+  .work-item{
+    background:var(--concrete);text-decoration:none;color:inherit;
+    padding:1.3rem 1.3rem 1.4rem;display:flex;flex-direction:column;gap:.6rem;min-height:9.5rem;
+    transition:background .06s linear,color .06s linear;
+  }
+  .work-item[hidden]{display:none}
+  .work-item:hover{background:var(--shadow-2);color:var(--light)}
+  .work-item .kind{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--oxide)}
+  .work-item:hover .kind{color:#ff7a5c}
+  .work-item .wtitle{font-family:"Archivo Black",sans-serif;font-size:1.02rem;line-height:1.1;letter-spacing:-.01em}
+  .work-item .wdesc{font-size:.74rem;line-height:1.55;color:var(--ink-soft);flex:1}
+  .work-item .wdesc.loading{opacity:.5}
+  .work-item:hover .wdesc{color:#c9c7bd}
+  .work-item .wfoot{display:flex;justify-content:space-between;align-items:center;gap:.6rem;
+    font-size:.6rem;letter-spacing:.1em;color:var(--ink-soft)}
+  .work-item:hover .wfoot{color:#a7a59b}
+  .work-item .chip{border:1px solid var(--line);padding:.15rem .45rem;text-transform:uppercase;letter-spacing:.12em}
+  .work-item:hover .chip{border-color:rgba(231,230,223,.3)}
+
+  .status{padding:1.6rem 0;font-size:.74rem;letter-spacing:.06em;color:var(--ink-soft)}
   .status.err{color:var(--oxide)}
-  .status a,footer a{color:var(--ink);text-decoration:underline}
+  .status a{color:var(--ink);text-decoration:underline}
 
-  footer{margin:3.5rem 0 5rem;padding-top:1.4rem;border-top:1px solid var(--line);
-    font-size:.64rem;letter-spacing:.16em;color:var(--ink-soft);
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:.6rem}
+  /* ───── NOW ───── */
+  .now p{max-width:60ch;font-size:.86rem;line-height:1.75;color:var(--ink-soft)}
+  .now p b{color:var(--ink);font-weight:500}
+
+  footer{margin:clamp(3rem,7vw,5rem) 0 4rem;padding-top:1.4rem;border-top:3px solid var(--ink);
+    display:flex;justify-content:space-between;flex-wrap:wrap;gap:1.2rem;
+    font-size:.66rem;letter-spacing:.1em;color:var(--ink-soft)}
+  footer a{color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+  footer a:hover{border-color:var(--ink);color:var(--oxide)}
+  footer .links{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem}
+  footer .sig{text-align:right;letter-spacing:.16em}
 
   @media(max-width:720px){
     :root{--cols:3}
-    .obra{grid-template-columns:2.4rem 1fr;gap:.5rem .9rem}
-    .obra .desc,.obra .end{grid-column:2}
-    .end{text-align:left}
+    .facets{grid-template-columns:1fr}
     .slab{box-shadow:10px 10px 0 0 rgba(21,20,15,.18)}
+    footer{flex-direction:column}
+    footer .sig{text-align:left}
   }
 </style>
 </head>
@@ -122,49 +156,181 @@
 <div class="wrap">
   <div class="columns" aria-hidden="true"></div>
 
-  <div class="ticks" aria-hidden="true">
-    <span>01</span><span>02</span><span>03</span><span>04</span><span>05</span><span>06</span>
+  <div class="ticks">
+    <span class="who">DANLESSA</span>
+    <nav>
+      <a href="#facets">facets</a>
+      <a href="#work">work</a>
+      <a href="#now">now</a>
+      <a href="#contact">contact</a>
+    </nav>
   </div>
 
   <header>
     <div class="slab">
-      <h1>danlessa<br>.github.io</h1>
-      <p class="manifest">Listagem de repositórios de código</p>
+      <div class="label">DANILO LESSA BERNARDINELI</div>
+      <h1>danlessa</h1>
+      <p class="synthesis">
+        <b>simulations &amp; systems engineering</b><span class="bar">|</span><b>geospace &amp; physics prose</b><span class="bar">|</span><b>sustainable cities activist</b>
+      </p>
     </div>
   </header>
   <div class="pilotis" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
 
-  <div class="count">
-    <span id="count">CARREGANDO</span>
-    <span>REPOS / DANLESSA</span>
-  </div>
+  <!-- ───── FACETS ───── -->
+  <section class="sec" id="facets">
+    <div class="sechead"><b>Facets</b><span>ONE PRACTICE / FOUR ANGLES</span></div>
+    <div class="facets" id="facetGrid"></div>
+  </section>
 
-  <main id="acervo" class="acervo" hidden></main>
-  <div id="status" class="status">Carregando acervo…</div>
+  <!-- ───── WORK ───── -->
+  <section class="sec" id="work">
+    <div class="sechead"><b>Selected work</b><span id="workScope">ALL FACETS</span></div>
+    <div class="filterbar">
+      <span id="workCount">—</span>
+      <button id="clearFilter" hidden>× clear filter</button>
+    </div>
+    <div class="workgrid" id="workGrid"></div>
+    <div id="status" class="status"></div>
+  </section>
 
-  <footer>
-    <span id="fonte">FONTE: api.github.com/users/danlessa</span>
-    <span id="gerado"></span>
+  <!-- ───── NOW ───── -->
+  <section class="sec now" id="now">
+    <div class="sechead"><b>Now</b><span id="nowDate"></span></div>
+    <p><b>Placeholder — edit me.</b> A short paragraph on what currently has your
+    attention: a model you're building, a piece you're writing, a campaign or
+    collective you're organizing with. Keep it dated and honest; it does the
+    heavy lifting for the researcher/activist credibility.</p>
+  </section>
+
+  <!-- ───── FOOTER ───── -->
+  <footer id="contact">
+    <div class="links">
+      <a href="mailto:danilo.lessa@gmail.com">email</a>
+      <a href="https://github.com/danlessa">github</a>
+      <a href="https://orcid.org/">orcid ↗</a>
+      <a href="https://zenodo.org/">zenodo ↗</a>
+      <a href="https://pedalhidro.github.io">pedal hidrográfico ↗</a>
+    </div>
+    <div class="sig" id="sig"></div>
   </footer>
 </div>
 
 <script>
-/* ───────── CONFIG ───────── */
+/* ═══════════ CONFIG ═══════════ */
 const USER = "danlessa";
 const EXCLUDE = [`${USER}.github.io`];
 const SHOW_FORKS = false;
 const SHOW_ARCHIVED = false;
 const README_CANDIDATES = ["README.md","readme.md","README.markdown","README.rst","README.txt","README"];
-/* ────────────────────────── */
 
-document.getElementById("fonte").textContent = `FONTE: api.github.com/users/${USER}`;
-document.getElementById("gerado").textContent = `GERADO ${new Date().toISOString().slice(0,10)}`;
+/* The four angles on one practice. Order = display order. */
+const FACETS = [
+  {key:"expression", label:"Expression",
+   desc:"Geospace & physics prose, essays, and the things made rather than proved."},
+  {key:"research", label:"Research",
+   desc:"Simulations & systems engineering — code and models, pulled live from GitHub."},
+  {key:"actions", label:"Actions",
+   desc:"Sustainable cities: organizing, advocacy, and civic infrastructure."},
+  {key:"facts", label:"Facts",
+   desc:"Data, measurements, and the evidence the actions stand on."},
+];
 
-const acervo = document.getElementById("acervo");
-const statusEl = document.getElementById("status");
-const countEl = document.getElementById("count");
+/* Hand-curated work. The `research` facet is auto-filled from GitHub below,
+   so you mainly maintain expression / actions / facts here.
+   kind: free label · facet: one of the FACETS keys · meta: small right-hand note */
+const CURATED = [
+  // ── EXPRESSION ──
+  {facet:"expression", kind:"essay", title:"Untitled prose", url:"#",
+   desc:"Placeholder — link an essay or piece of geospace/physics writing.", meta:""},
+  // ── ACTIONS ──
+  {facet:"actions", kind:"campaign", title:"Sustainable cities", url:"#",
+   desc:"Placeholder — a campaign, coalition, or civic project you organize with.", meta:""},
+  {facet:"actions", kind:"collective", title:"Pedal Hidrográfico", url:"https://pedalhidro.github.io",
+   desc:"Placeholder — describe the collective and your role in it.", meta:""},
+  // ── FACTS ──
+  {facet:"facts", kind:"dataset", title:"Untitled dataset", url:"#",
+   desc:"Placeholder — a dataset, dashboard, or analysis backing the advocacy.", meta:""},
+];
+/* ══════════════════════════════ */
 
-async function load(){
+const today = new Date().toISOString().slice(0,10);
+document.getElementById("nowDate").textContent = today;
+document.getElementById("sig").textContent = `danlessa.github.io · updated ${today}`;
+
+const facetGrid = document.getElementById("facetGrid");
+const workGrid  = document.getElementById("workGrid");
+const statusEl  = document.getElementById("status");
+const workScope = document.getElementById("workScope");
+const workCount = document.getElementById("workCount");
+const clearBtn  = document.getElementById("clearFilter");
+
+let ITEMS = CURATED.map(x => ({...x}));   // grows as repos arrive
+let activeFacet = "all";
+
+/* ── facet cards (act as filters) ── */
+FACETS.forEach((f,i)=>{
+  const b = document.createElement("button");
+  b.className = "facet";
+  b.dataset.facet = f.key;
+  b.innerHTML = `
+    <div class="num">0${i+1}</div>
+    <div class="flabel">${f.label}</div>
+    <div class="fdesc">${f.desc}</div>
+    <div class="fcount" data-count="${f.key}">—</div>`;
+  b.addEventListener("click", ()=> setFilter(activeFacet === f.key ? "all" : f.key));
+  facetGrid.appendChild(b);
+});
+clearBtn.addEventListener("click", ()=> setFilter("all"));
+
+function facetLabel(key){ const f = FACETS.find(x=>x.key===key); return f ? f.label : key; }
+
+function setFilter(key){
+  activeFacet = key;
+  document.querySelectorAll(".facet").forEach(el=>
+    el.classList.toggle("active", key!=="all" && el.dataset.facet===key));
+  workScope.textContent = key==="all" ? "ALL FACETS" : facetLabel(key).toUpperCase();
+  clearBtn.hidden = key==="all";
+  render();
+}
+
+function counts(){
+  const c = {};
+  FACETS.forEach(f=> c[f.key]=0);
+  ITEMS.forEach(it=>{ if(c[it.facet]!=null) c[it.facet]++; });
+  return c;
+}
+
+function render(){
+  workGrid.innerHTML = "";
+  const shown = ITEMS.filter(it => activeFacet==="all" || it.facet===activeFacet);
+  shown.forEach(it => workGrid.appendChild(card(it)));
+  workCount.textContent = `${String(shown.length).padStart(2,"0")} ${shown.length===1?"ITEM":"ITEMS"}`;
+  const c = counts();
+  document.querySelectorAll("[data-count]").forEach(el=>{
+    el.textContent = `${String(c[el.dataset.count]||0).padStart(2,"0")} items`;
+  });
+}
+
+function card(it){
+  const a = document.createElement(it.url && it.url!=="#" ? "a" : "div");
+  a.className = "work-item";
+  if(it.url && it.url!=="#") a.href = it.url;
+  a.innerHTML = `
+    <div class="kind">${escapeHtml(it.kind||"work")}</div>
+    <div class="wtitle">${escapeHtml(it.title)}</div>
+    <div class="wdesc ${it._loading?"loading":""}">${escapeHtml(it.desc||"—")}</div>
+    <div class="wfoot">
+      <span class="chip">${escapeHtml(facetLabel(it.facet))}</span>
+      <span>${escapeHtml(it.meta||"")}</span>
+    </div>`;
+  return a;
+}
+
+render();
+
+/* ── RESEARCH facet: live GitHub repos ── */
+async function loadRepos(){
   let repos;
   try{
     let res = await fetch(`https://api.github.com/users/${USER}/repos?per_page=100&sort=pushed`,
@@ -180,69 +346,52 @@ async function load(){
   }catch(e){
     statusEl.className = "status err";
     statusEl.innerHTML = e.message === "rate"
-      ? `LIMITE DE REQUISIÇÕES DO GITHUB ATINGIDO NESTA REDE. TENTE EM ALGUNS MINUTOS.`
-      : `FALHA AO CARREGAR (${e.message}). VER <a href="https://github.com/${USER}">github.com/${USER}</a>.`;
+      ? `GitHub rate limit reached on this network — repos will show again shortly.`
+      : `Couldn't load repos (${e.message}). See <a href="https://github.com/${USER}">github.com/${USER}</a>.`;
     return;
   }
 
-  repos = repos
+  const clean = repos
     .filter(r => !EXCLUDE.includes(r.name))
     .filter(r => SHOW_FORKS || !r.fork)
     .filter(r => SHOW_ARCHIVED || !r.archived)
     .sort((a,b)=> new Date(b.pushed_at) - new Date(a.pushed_at));
 
-  if(!repos.length){ statusEl.textContent = "NENHUM REPO PÚBLICA ENCONTRADA."; return; }
-
-  statusEl.style.display = "none";
-  acervo.hidden = false;
-  countEl.textContent = `${String(repos.length).padStart(2,"0")} REPOS`;
-
-  repos.forEach((repo,i)=>{
+  clean.forEach(repo=>{
     const pageUrl = repo.has_pages ? `https://${USER}.github.io/${repo.name}/` : null;
-    const href = pageUrl || repo.html_url;
     const pushed = repo.pushed_at ? repo.pushed_at.slice(0,7).replace("-",".") : "";
-
-    const topics = (repo.topics||[]).slice(0,4).map(t=>`<span>${t}</span>`).join("");
-    const meta = [];
-    if(repo.language) meta.push(`<div class="meta"><i></i>${repo.language}</div>`);
-    if(repo.stargazers_count) meta.push(`<div class="meta">★ ${repo.stargazers_count}</div>`);
-    if(pushed) meta.push(`<div class="meta">${pushed}</div>`);
-
-    const a = document.createElement("a");
-    a.className = "obra";
-    a.href = href;
-    a.innerHTML = `
-      <div class="bay">${String(i+1).padStart(2,"0")}</div>
-      <div>
-        <div class="name">${repo.name}</div>
-        ${topics ? `<div class="topics">${topics}</div>` : ""}
-      </div>
-      <div class="desc ${repo.description ? "" : "loading"}" data-need-readme="${repo.description ? "" : "1"}">
-        ${repo.description ? escapeHtml(repo.description) : "lendo README…"}
-      </div>
-      <div class="end">
-        ${meta.join("")}
-        <div class="link">${pageUrl ? "ver repo ↗" : "código ↗"}</div>
-      </div>`;
-    acervo.appendChild(a);
-
-    const descEl = a.querySelector(".desc");
-    if(descEl.dataset.needReadme) enrichReadme(descEl, repo);
+    const metaBits = [];
+    if(repo.language) metaBits.push(repo.language);
+    if(repo.stargazers_count) metaBits.push(`★ ${repo.stargazers_count}`);
+    if(pushed) metaBits.push(pushed);
+    const item = {
+      facet:"research",
+      kind: pageUrl ? "page · repo" : "repo",
+      title: repo.name,
+      url: pageUrl || repo.html_url,
+      desc: repo.description || "",
+      meta: metaBits.join("  ·  "),
+      _loading: !repo.description,
+      _repo: repo,
+    };
+    ITEMS.push(item);
   });
-}
 
-async function enrichReadme(el, repo){
-  const branch = repo.default_branch || "HEAD";
-  for(const name of README_CANDIDATES){
-    try{
-      const r = await fetch(`https://raw.githubusercontent.com/${USER}/${repo.name}/${branch}/${name}`);
-      if(!r.ok) continue;
-      const s = firstParagraph(await r.text());
-      if(s){ el.classList.remove("loading"); el.textContent = s; } else { el.textContent = "—"; }
-      return;
-    }catch(_){}
-  }
-  el.textContent = "—";
+  render();
+
+  // enrich repos with no description from their README
+  ITEMS.filter(it=>it.facet==="research" && it._loading).forEach(async it=>{
+    const repo = it._repo, branch = repo.default_branch || "HEAD";
+    for(const name of README_CANDIDATES){
+      try{
+        const r = await fetch(`https://raw.githubusercontent.com/${USER}/${repo.name}/${branch}/${name}`);
+        if(!r.ok) continue;
+        const s = firstParagraph(await r.text());
+        it.desc = s || "—"; it._loading = false; render(); return;
+      }catch(_){}
+    }
+    it.desc = "—"; it._loading = false; render();
+  });
 }
 
 function firstParagraph(md){
@@ -263,13 +412,13 @@ function firstParagraph(md){
     .replace(/\[([^\]]+)\]\([^)]*\)/g,"$1")
     .replace(/[*_`#>]/g,"")
     .replace(/\s+/g," ").trim();
-  if(s.length > 150) s = s.slice(0,147).replace(/\s+\S*$/,"") + "…";
+  if(s.length > 140) s = s.slice(0,137).replace(/\s+\S*$/,"") + "…";
   return s;
 }
 
-function escapeHtml(s){return s.replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
 
-load();
+loadRepos();
 </script>
 </body>
 </html>
